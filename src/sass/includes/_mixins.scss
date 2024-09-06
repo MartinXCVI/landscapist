@@ -28,11 +28,24 @@
   align-items: $align;
 }
 
+@mixin flexRowCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin flexCol($justify, $align) {
   display: flex;
   flex-direction: column;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin flexColCenter() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin colorize($bg, $color) {

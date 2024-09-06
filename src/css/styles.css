@@ -22,6 +22,15 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  text-transform: capitalize;
+  line-height: 2.25rem;
+}
+
+img {
+  border-radius: 0.25rem;
+}
+
 h1 {
   font-family: "Kurale", serif;
   font-size: 3rem;
@@ -29,12 +38,13 @@ h1 {
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Kurale", serif;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 p {
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
@@ -156,10 +166,255 @@ p {
   text-shadow: 0 0 0;
 }
 
+.home-intro-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-intro-wrapper .home-intro-section {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.home-intro-wrapper .home-intro-section .home-introduction {
+  width: 75%;
+  text-align: center;
+}
+.home-intro-wrapper .home-intro-section .home-introduction .home-intro-title {
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+.home-intro-wrapper .home-intro-section .home-introduction .home-intro-text {
+  margin-bottom: 2.5rem;
+}
+.home-intro-wrapper .home-intro-section .home-introduction .home-intro-btn {
+  margin-bottom: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: #007000;
+  border: 1px solid #007000;
+  border-radius: 3rem;
+  transition: 0.3s linear all;
+}
+.home-intro-wrapper .home-intro-section .home-introduction .home-intro-btn:hover {
+  background-color: #007000;
+  color: #fdfdfd;
+}
+
+.home-services-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-services-wrapper .home-services-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+.home-services-wrapper .home-services-container .home-services-figure {
+  min-width: 40%;
+  max-width: 40%;
+}
+.home-services-wrapper .home-services-container .home-services-figure img {
+  width: 100%;
+}
+.home-services-wrapper .home-services-container .home-services-content {
+  width: 50%;
+}
+.home-services-wrapper .home-services-container .home-services-content .home-services-title {
+  margin-bottom: 1.5rem;
+}
+.home-services-wrapper .home-services-container .home-services-content p {
+  margin-bottom: 0.75rem;
+}
+.home-services-wrapper .home-services-container .home-services-content p:nth-last-of-type(1) {
+  margin-bottom: 2.5rem;
+}
+.home-services-wrapper .home-services-container .home-services-content .home-services-btn {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: #000045;
+  border: 1px solid #000045;
+  border-radius: 3rem;
+  transition: 0.3s linear all;
+}
+.home-services-wrapper .home-services-container .home-services-content .home-services-btn:hover {
+  background-color: rgba(11, 11, 112, 0.9333333333);
+  color: #fdfdfd;
+}
+
+.inverted-row {
+  flex-direction: row-reverse;
+}
+
+.bg-grey {
+  background-color: #efefef;
+}
+
+.home-services-quote {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.home-services-quote::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -3;
+  background: #353535;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
+.home-services-quote::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -5;
+  background-image: url("/images/home-quote.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  background-attachment: fixed;
+}
+.home-services-quote .home-services-blockquote {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fdfdfd;
+  text-shadow: 0 0 0.25rem #353535;
+}
+.home-services-quote .home-services-blockquote .home-blockquote-quote {
+  font-size: 1.75rem;
+  font-style: italic;
+}
+.home-services-quote .home-services-blockquote .home-blockquote-author {
+  font-size: 1.25rem;
+}
+
+@media all and (max-width: 480px) {
+  .home-services-wrapper .home-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-figure {
+    width: 95%;
+    max-width: 95%;
+    margin-bottom: 1rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-content {
+    width: 95%;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-btn {
+    width: 100%;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 767px) {
+  .home-services-wrapper .home-services-container {
+    padding: 3rem 2rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-figure {
+    width: 90%;
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-content {
+    width: 90%;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-btn {
+    width: 45%;
+  }
+}
+@media all and (max-width: 767px) {
+  .home-services-quote .home-services-blockquote {
+    width: 85%;
+  }
+  .home-services-quote .home-services-blockquote .home-blockquote-quote {
+    font-size: 1.25rem;
+  }
+  .home-services-quote .home-services-blockquote .home-blockquote-author {
+    font-size: 1rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .home-services-wrapper .home-services-container {
+    padding: 3rem 2rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-figure {
+    width: 80%;
+    max-width: 80%;
+    margin-bottom: 0.75rem;
+  }
+  .home-services-wrapper .home-services-container .home-services-content {
+    width: 80%;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .home-services-wrapper .home-services-container .home-services-content .home-services-btn {
+    width: 35%;
+  }
+  .home-services-quote .home-services-blockquote {
+    width: 75%;
+  }
+  .home-services-quote .home-services-blockquote .home-blockquote-quote {
+    font-size: 1.5rem;
+  }
+  .home-services-quote .home-services-blockquote .home-blockquote-author {
+    font-size: 1.25rem;
+  }
+}
 @media all and (max-width: 991px) {
   .hero-home-section .hero-home-title {
     line-height: 3.5rem;
     margin-bottom: 0.75rem;
+  }
+  .home-services-wrapper .home-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-services-wrapper .home-services-container .home-services-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-services-wrapper .home-services-container .home-services-content p:nth-last-of-type(1) {
+    margin-bottom: 1rem;
   }
 }
 
