@@ -142,6 +142,43 @@
   }
 }
 
+.home-contact-wrapper {
+  width: 100%;
+  min-height: 75vh;
+  @include mx.flexColCenter;
+  position: relative;
+  &::before {
+    @include mx.bgColor(-3, color.$softerBlack, 0.4);
+  }
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/home-contact.jpg', 0.8);
+  }
+  .home-contact-section {
+    width: 55%;
+    text-align: center;
+    color: color.$white;
+    text-shadow: 0 0 0.25rem color.$softerBlack;
+    .home-contact-title {
+      font-size: 2.25rem;
+      margin-bottom: 1rem
+    }
+    .home-contact-text {
+      font-size: 1.35rem;
+      margin-bottom: 2.5rem;
+    }
+    .home-contact-btn {
+      padding: 0.75rem 2rem;
+      @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);
+      transition: var.$trs03;
+      margin-bottom: 1rem;
+      &:hover {
+        @include mx.colorize(color.$white, color.$black);
+        text-shadow: 0 0 0;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 480px) {
 
   .home-services-wrapper {
@@ -204,6 +241,20 @@
       }
     }
   }
+
+  .home-contact-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .home-contact-section {
+      width: 90%;
+      .home-contact-title {
+        font-size: 1.75rem;
+      }
+      .home-contact-text {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -236,6 +287,20 @@
         font-size: 1.5rem;
       }
       .home-blockquote-author {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .home-contact-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .home-contact-section {
+      width: 75%;
+      .home-contact-title {
+        font-size: 2rem;
+      }
+      .home-contact-text {
         font-size: 1.25rem;
       }
     }

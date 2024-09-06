@@ -312,6 +312,66 @@ p {
   font-size: 1.25rem;
 }
 
+.home-contact-wrapper {
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.home-contact-wrapper::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -3;
+  background: #353535;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
+.home-contact-wrapper::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -5;
+  background-image: url("/images/home-contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+.home-contact-wrapper .home-contact-section {
+  width: 55%;
+  text-align: center;
+  color: #fdfdfd;
+  text-shadow: 0 0 0.25rem #353535;
+}
+.home-contact-wrapper .home-contact-section .home-contact-title {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+.home-contact-wrapper .home-contact-section .home-contact-text {
+  font-size: 1.35rem;
+  margin-bottom: 2.5rem;
+}
+.home-contact-wrapper .home-contact-section .home-contact-btn {
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  border-radius: 3rem;
+  transition: 0.3s linear all;
+  margin-bottom: 1rem;
+}
+.home-contact-wrapper .home-contact-section .home-contact-btn:hover {
+  background-color: #fdfdfd;
+  color: #151515;
+  text-shadow: 0 0 0;
+}
+
 @media all and (max-width: 480px) {
   .home-services-wrapper .home-services-container {
     display: flex;
@@ -366,6 +426,19 @@ p {
   .home-services-quote .home-services-blockquote .home-blockquote-author {
     font-size: 1rem;
   }
+  .home-contact-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .home-contact-wrapper .home-contact-section {
+    width: 90%;
+  }
+  .home-contact-wrapper .home-contact-section .home-contact-title {
+    font-size: 1.75rem;
+  }
+  .home-contact-wrapper .home-contact-section .home-contact-text {
+    font-size: 1rem;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .home-services-wrapper .home-services-container {
@@ -393,6 +466,19 @@ p {
     font-size: 1.5rem;
   }
   .home-services-quote .home-services-blockquote .home-blockquote-author {
+    font-size: 1.25rem;
+  }
+  .home-contact-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .home-contact-wrapper .home-contact-section {
+    width: 75%;
+  }
+  .home-contact-wrapper .home-contact-section .home-contact-title {
+    font-size: 2rem;
+  }
+  .home-contact-wrapper .home-contact-section .home-contact-text {
     font-size: 1.25rem;
   }
 }
