@@ -1,0 +1,16 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.header-element {
+  width: 100%;
+  @include mx.flexRow(var.$between, center);
+  padding: 2rem;
+}
+
+@media all and (max-width: 991px) {
+  .header-element {
+    @include mx.flexCol(var.$between, center);
+  }
+}

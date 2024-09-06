@@ -1,0 +1,47 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.hero-home-section {
+  width: 100%;
+  min-height: 90vh;
+  @include mx.flexCol(center, center);
+  position: relative;
+  color: color.$white;
+  text-shadow: 0 0 0.25rem color.$black;
+  text-align: center;
+  &::before {
+    @include mx.bgColor(-3, color.$softerBlack, 0.2);
+  }
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/home-bg.jpg', 0.8);
+  }
+  .hero-home-title {
+    margin-bottom: 0.5rem;
+  }
+  .hero-home-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.75rem;
+  }
+  .hero-home-btn {
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 300;
+    @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);
+    transition: var.$trs03;
+    &:hover {
+      @include mx.colorize(color.$white, color.$black);
+      text-shadow: 0 0 0;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .hero-home-section {
+    .hero-home-title {
+      line-height: 3.5rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+}

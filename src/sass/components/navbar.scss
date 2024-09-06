@@ -1,0 +1,26 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.navbar {
+  min-width: 50%;
+  @include mx.flexRow(center, center);
+}
+
+.nav-list {
+  min-width: 100%;
+  @include mx.flexRow(var.$evenly, center);
+  .nav-item {
+    .nav-link {
+      font-family: font.$titleFont;
+      color: color.$lightBlack;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .nav-list {
+    @include mx.flexCol(var.$between, center);
+  }
+}
