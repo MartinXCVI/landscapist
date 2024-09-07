@@ -1,0 +1,68 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+#error-main {
+  width: 100%;
+  min-height: 100vh;
+  @include mx.flexColCenter();
+  position: relative;
+  &::before {
+    @include mx.bgColor(-3, color.$softerBlack, 0.4);
+  }
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/error-bg.jpg', 0.8);
+    filter: blur(0.15rem);
+  }
+  .error-section {
+    @include mx.flexColCenter();
+    text-align: center;
+    color: color.$white;
+    text-shadow: 0 0 0.25rem color.$softerBlack;
+    margin-bottom: 1rem;
+    .error-title {
+      font-size: 4rem;
+      margin-bottom: 1.25rem;
+    }
+    .error-subtitle {
+      font-size: 2.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .error-text {
+      font-size: 1.75rem;
+      margin-bottom: 1.80rem;
+    }
+    .error-btn {
+      @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);
+      padding: 0.75rem 2rem;
+      transition: var.$trs03;
+      &:hover {
+        text-shadow: 0 0 0;
+        @include mx.colorize(color.$white, color.$black);
+      }
+    }
+  }
+}
+
+.error-title, .error-subtitle, .error-text {
+  font-family: font.$elegantFont;
+}
+
+@media all and (max-width: 991px) {
+
+  #error-main {
+    .error-section {
+      .error-title {
+        font-size: 3.5rem;
+      }
+      .error-subtitle {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      .error-text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
