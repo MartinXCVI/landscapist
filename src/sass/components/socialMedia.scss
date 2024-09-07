@@ -1,0 +1,16 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.social-media-wrapper {
+  @include mx.flexRowCenter();
+  gap: 1rem;
+  // padding-top: 1rem;
+  // padding-bottom: 1rem;
+  // margin-bottom: 1rem;
+}
+
+.social-icon {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,27 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.footer-element {
+  @include mx.flexRow(var.$between, center);
+  padding: 2rem;
+  .navbar {
+    width: 35%;
+  }
+}
+
+@media all and (max-width: 991px) {
+
+  .footer-element {
+    @include mx.flexColCenter();
+    .navbar {
+      margin-bottom: 2rem;
+      .nav-list {
+        .nav-item {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
