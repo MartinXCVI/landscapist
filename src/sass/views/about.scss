@@ -1,0 +1,73 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.about-intro-wrapper {
+  width: 100%;
+  @include mx.flexColCenter();
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  .about-intro {
+    width: 65%;
+    .about-title {
+      margin-bottom: 2rem;
+    }
+    .about-text {
+      margin-bottom: 1rem;
+    }
+    .about-intro-fig {
+      width: 100%;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+
+  .about-intro-wrapper {
+    .about-intro {
+      width: 90%;
+      .about-title {
+        margin-bottom: 1.5rem;
+      }
+      .about-intro-fig {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 767px) {
+
+  .about-intro-wrapper {
+    .about-intro {
+      width: 80%;
+      .about-title {
+        margin-bottom: 1.75rem;
+      }
+      .about-intro-fig {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+  .about-intro-wrapper {
+    .about-intro {
+      width: 70%;
+      .about-intro-fig {
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+      }
+    }
+  }
+}
