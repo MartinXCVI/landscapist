@@ -154,6 +154,16 @@ main {
   align-items: center;
   gap: 1rem;
 }
+.social-media-wrapper .social-media-link {
+  color: #202020;
+  transition: 0.3s linear all;
+}
+.social-media-wrapper .social-media-link:hover {
+  color: #007000;
+}
+.social-media-wrapper .social-media-link:focus {
+  color: #359b35;
+}
 
 .social-icon {
   font-size: 1.25rem;
