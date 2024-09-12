@@ -1,0 +1,22 @@
+---
+interface Props {
+  reverse?: string;
+  img: string;
+  alt: string;
+  title: string;
+  text :string;
+}
+
+const { reverse, img, alt, title, text } = Astro.props
+---
+
+<div class=`service-card ${reverse}`>
+  <figure class="service-card-fig">
+    <img src={img} alt={alt}>
+  </figure>
+  <div class="service-card-info">
+    <h2 class="service-card-title capital">{title}</h2>
+    <p class="service-card-text">{text}</p>
+    <a class="service-card-btn capital" href="/Contact">get a quote</a>
+  </div>
+</div>

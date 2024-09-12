@@ -772,6 +772,220 @@ main {
     margin-bottom: 0.5rem;
   }
 }
+.services-intro-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #359b35;
+  padding: 2rem 4rem;
+  margin-bottom: 2rem;
+}
+.services-intro-wrapper .services-intro-title {
+  width: 100%;
+  text-align: center;
+  color: #fdfdfd;
+}
+
+.services-section-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.service-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.service-card .service-card-fig {
+  width: 25%;
+}
+.service-card .service-card-fig img {
+  width: 100%;
+}
+.service-card .service-card-info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 3rem;
+}
+.service-card .service-card-info .service-card-title {
+  margin-bottom: 1rem;
+}
+.service-card .service-card-info .service-card-text {
+  margin-bottom: 1.5rem;
+}
+.service-card .service-card-info .service-card-btn {
+  text-align: center;
+  background-color: transparent;
+  color: #151515;
+  border: 1px solid #151515;
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s linear all;
+}
+.service-card .service-card-info .service-card-btn:hover {
+  background-color: #000045;
+  color: #fdfdfd;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  background-color: #f6f6f6;
+}
+
+.services-quote-wrapper {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.services-quote-wrapper .services-blockquote {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 0 0.25rem #353535;
+}
+.services-quote-wrapper .services-blockquote .services-quote {
+  font-style: italic;
+  color: #fdfdfd;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.services-quote-wrapper .services-blockquote .services-author {
+  color: #fdfdfd;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.services-quote-wrapper .services-blockquote .services-quote-btn {
+  background-color: transparent;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s linear all;
+}
+.services-quote-wrapper .services-blockquote .services-quote-btn:hover {
+  text-shadow: 0 0 0;
+  background-color: #fdfdfd;
+  color: #151515;
+}
+.services-quote-wrapper::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -3;
+  background: #353535;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+.services-quote-wrapper::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -5;
+  background-image: url("/images/services-quote-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  filter: blur(0.05rem);
+  background-attachment: fixed;
+}
+
+@media all and (max-width: 480px) {
+  .service-card .service-card-fig {
+    width: 90%;
+  }
+  .service-card .service-card-info {
+    width: 90%;
+    padding: 0;
+  }
+  .service-card .service-card-info .service-card-btn {
+    width: 100%;
+  }
+  .services-quote-wrapper .services-blockquote {
+    width: 90%;
+  }
+  .services-quote-wrapper .services-blockquote .services-quote {
+    font-size: 1.25rem;
+  }
+  .services-quote-wrapper .services-blockquote .services-author {
+    font-size: 1rem;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 767px) {
+  .service-card .service-card-fig {
+    width: 55%;
+  }
+  .service-card .service-card-info {
+    width: 80%;
+    padding: 0;
+  }
+  .service-card .service-card-info .service-card-btn {
+    width: 60%;
+  }
+  .services-quote-wrapper .services-blockquote {
+    width: 80%;
+  }
+  .services-quote-wrapper .services-blockquote .services-quote {
+    font-size: 1.5rem;
+  }
+  .services-quote-wrapper .services-blockquote .services-author {
+    font-size: 1.15rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .service-card {
+    flex-direction: column;
+  }
+  .service-card .service-card-fig {
+    margin-bottom: 0.25rem;
+  }
+  .service-card .service-card-info {
+    align-items: center;
+    padding: 0;
+  }
+  .service-card .service-card-info .service-card-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .reverse {
+    flex-direction: column;
+  }
+  .services-quote-wrapper {
+    min-height: 100vh;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .service-card .service-card-fig {
+    width: 40%;
+  }
+  .service-card .service-card-info {
+    width: 55%;
+  }
+  .services-quote-wrapper .services-blockquote {
+    width: 75%;
+  }
+}
 #error-main {
   width: 100%;
   min-height: 100vh;

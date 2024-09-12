@@ -4,16 +4,62 @@ import Layout from "../layouts/Layout.astro";
 import Header from '../components/Header.astro';
 import Logo from '../components/Logo.astro';
 import Navbar from '../components/Navbar.astro';
+import ServicesIntro from "./Services/ServicesIntro.astro";
+import ServicesSection from "./Services/ServicesSection.astro";
+import ServiceCard from "./Services/ServiceCard.astro";
+import ServicesQuote from "./Services/ServicesQuote.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Landscapist: About">
+<Layout title="Landscapist: Services">
 	<Header>
 		<Logo />
 		<Navbar />
 	</Header>
   <main>
-    
+    <ServicesIntro />
+		<ServicesSection>
+			<ServiceCard
+				img="/images/services-img/services-img-1.jpg"
+				alt="alt text"
+				title="eye-catching landscaping"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+			<ServiceCard
+				reverse="reverse"
+				img="/images/services-img/services-img-2.jpg"
+				alt="alt text"
+				title="turf handling"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+			<ServiceCard
+				img="/images/services-img/services-img-3.jpg"
+				alt="alt text"
+				title="organic forestry"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+			<ServiceCard
+				reverse="reverse"
+				img="/images/services-img/services-img-4.jpg"
+				alt="alt text"
+				title="greeny beautifications"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+			<ServiceCard
+				img="/images/services-img/services-img-5.jpg"
+				alt="alt text"
+				title="gardens structuring"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+			<ServiceCard
+				reverse="reverse"
+				img="/images/services-img/services-img-6.jpg"
+				alt="alt text"
+				title="smooth maintenance"
+				text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam nesciunt, vel tempore magnam, doloribus nostrum ipsa consequatur repellendus ipsum, expedita iusto facere cumque possimus illo quas hic doloremque neque accusamus blanditiis dignissimos explicabo asperiores aut saepe. Fugiat quia recusandae voluptatem excepturi, quo praesentium aspernatur placeat odit laudantium."
+			/>
+		</ServicesSection>
+		<ServicesQuote />
   </main>
 	<Footer />
 </Layout>

@@ -1,0 +1,201 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.services-intro-wrapper {
+  width: 100%;
+  @include mx.flexCol(center, flex-start);
+  background-color: color.$thirdColor;
+  padding: 2rem 4rem;
+  margin-bottom: 2rem;
+  .services-intro-title {
+    width: 100%;
+    text-align: center;
+    color: color.$white;
+  }
+}
+
+.services-section-wrapper {
+  width: 100%;
+  @include mx.flexColCenter();
+  padding-bottom: 2rem;
+}
+
+.service-card {
+  width: 100%;
+  @include mx.flexRowCenter();
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  .service-card-fig {
+    width: 25%;
+    img {
+      width: 100%;
+    }
+  }
+  .service-card-info {
+    width: 45%;
+    @include mx.flexCol(center, flex-start);
+    padding: 1rem 3rem;
+    .service-card-title {
+      margin-bottom: 1rem;
+    }
+    .service-card-text {
+      margin-bottom: 1.5rem;
+    }
+    .service-card-btn {
+      text-align: center;
+      @include mx.btnStyle(transparent, color.$black, color.$black, 3rem);
+      padding: 0.5rem 1.5rem;
+      transition: var.$trs03;
+      &:hover {
+        @include mx.colorize(color.$fourthColor, color.$white);
+      }
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  background-color: color.$whiteSmoke;
+}
+
+.services-quote-wrapper {
+  width: 100%;
+  min-height: 90vh;
+  @include mx.flexColCenter();
+  position: relative;
+  .services-blockquote {
+    width: 50%;
+    @include mx.flexColCenter();
+    text-align: center;
+    text-shadow: 0 0 0.25rem color.$softerBlack;
+    .services-quote {
+      font-style: italic;
+      color: color.$white;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .services-author {
+      color: color.$white;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .services-quote-btn {
+      @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);
+      padding: 0.5rem 1.5rem;
+      transition: var.$trs03;
+      &:hover {
+        text-shadow: 0 0 0;
+        @include mx.colorize(color.$white, color.$black);
+      }
+    }
+  }
+  &::before {
+    @include mx.bgColor(-3, color.$softerBlack, 0.3);
+  }
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/services-quote-bg.jpg', 0.7);
+    filter: blur(0.05rem);
+    background-attachment: fixed;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .service-card {
+    .service-card-fig {
+      width: 90%;
+    }
+    .service-card-info {
+      width: 90%;
+      padding: 0;
+      .service-card-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .services-quote-wrapper {
+    .services-blockquote {
+      width: 90%;
+      .services-quote {
+        font-size: 1.25rem;
+      }
+      .services-author {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 767px) {
+
+  .service-card {
+    .service-card-fig {
+      width: 55%;
+    }
+    .service-card-info {
+      width: 80%;
+      padding: 0;
+      .service-card-btn {
+        width: 60%;
+      }
+    }
+  }
+
+  .services-quote-wrapper {
+    .services-blockquote {
+      width: 80%;
+      .services-quote {
+        font-size: 1.5rem;
+      }
+      .services-author {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .service-card {
+    flex-direction: column;
+    .service-card-fig {
+      margin-bottom: 0.25rem;
+    }
+    .service-card-info {
+      align-items: center;
+      padding: 0;
+      .service-card-title {
+        font-size: 1.75rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .services-quote-wrapper {
+    min-height: 100vh;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+  .service-card {
+    .service-card-fig {
+      width: 40%;
+    }
+    .service-card-info {
+      width: 55%;
+    }
+  }
+
+  .services-quote-wrapper {
+    .services-blockquote {
+      width: 75%;
+    }
+  }
+}
