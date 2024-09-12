@@ -698,6 +698,55 @@ main {
   margin-bottom: 2rem;
 }
 
+@media all and (max-width: 480px) {
+  .works-intro-wrapper {
+    padding: 2rem 1rem;
+  }
+  .landscape-wrapper {
+    padding: 2rem 1rem;
+  }
+  .work-cards-wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-cards-wrapper .work-cards-card {
+    width: 95%;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 767px) {
+  .works-intro-wrapper {
+    padding: 2rem 2rem;
+  }
+  .landscape-wrapper {
+    padding: 2rem 2rem;
+  }
+  .work-cards-wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-cards-wrapper .work-cards-card {
+    width: 85%;
+  }
+}
+@media all and (max-width: 767px) {
+  .works-intro-wrapper .works-intro-text {
+    width: 90%;
+  }
+}
+@media all and (max-width: 991px) {
+  .landscape-wrapper .landscape-title {
+    margin-bottom: 1rem;
+  }
+  .work-cards-wrapper .work-cards-card .work-cards-title {
+    margin-bottom: 1rem;
+  }
+}
 #error-main {
   width: 100%;
   min-height: 100vh;
