@@ -1,0 +1,18 @@
+---
+interface Props {
+  img: string;
+  alt: string;
+  title: string,
+  text: string
+}
+
+const { img, alt, title, text } = Astro.props
+---
+
+<section class="landscape-wrapper">
+  <figure class="landscape-figure">
+    <img src={img} alt={alt}>
+  </figure>
+  <h3 class="landscape-title">{title}</h3>
+  <p class="landscape-text">{text}</p>
+</section>

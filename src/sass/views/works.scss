@@ -1,0 +1,67 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.works-main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.works-intro-wrapper {
+  width: 100%;
+  @include mx.flexCol(center, flex-start);
+  padding: 2rem 4rem;
+  .works-intro-title {
+    margin-bottom: 1.25rem;
+  }
+  .works-intro-text {
+    width: 80%;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+  }
+}
+
+.landscape-wrapper {
+  width: 100%;
+  @include mx.flexCol(center, flex-start);
+  padding: 2rem 4rem;
+  .landscape-figure {
+    width: 100%;
+    margin-bottom: 1rem;
+    img {
+      width: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+  .landscape-title {
+    margin-bottom: 2rem;
+  }
+  .landscape-text {
+    margin-bottom: 2rem;
+  }
+}
+
+.work-cards-wrapper {
+  width: 100%;
+  @include mx.flexRow(var.$evenly, center);
+  padding: 2rem;
+  .work-cards-card {
+    width: 45%;
+    @include mx.flexCol(center, flex-start);
+    padding: 1rem;
+    .work-cards-figure {
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 0.25rem;
+      }
+    }
+    .work-cards-title {
+      margin-bottom: 2rem;
+    }
+    .work-cards-text {
+      margin-bottom: 2rem;
+    }
+  }
+}
