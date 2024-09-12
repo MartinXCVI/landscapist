@@ -19,9 +19,11 @@
   }
   .hero-home-title {
     margin-bottom: 1.25rem;
+    color: color.$white;
   }
   .hero-home-subtitle {
     font-size: 1.2rem;
+    color: color.$white;
     margin-bottom: 1.75rem;
   }
   .hero-home-btn {
@@ -135,9 +137,11 @@
     .home-blockquote-quote {
       font-size: 1.75rem;
       font-style: italic;
+      color: color.$white;
     }
     .home-blockquote-author {
       font-size: 1.25rem;
+      color: color.$white;
     }
   }
 }
@@ -160,11 +164,13 @@
     text-shadow: 0 0 0.25rem color.$softerBlack;
     .home-contact-title {
       font-size: 2.25rem;
-      margin-bottom: 1rem
+      margin-bottom: 1rem;
+      color: color.$white;
     }
     .home-contact-text {
       font-size: 1.35rem;
       margin-bottom: 2.5rem;
+      color: color.$white;
     }
     .home-contact-btn {
       padding: 0.75rem 2rem;

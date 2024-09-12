@@ -30,6 +30,7 @@ h1, h2, h3 {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  color: #151515;
 }
 
 img {
@@ -59,12 +60,22 @@ p {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
   text-wrap: pretty;
+  color: #202020;
 }
 
 main {
   min-height: 70vh;
 }
 
+.capital {
+  text-transform: capitalize;
+}
+
+@media all and (max-width: 575px) {
+  p {
+    font-size: 1rem;
+  }
+}
 /*----- Includes -----*/
 /*----- Components -----*/
 .header-element {
@@ -206,9 +217,11 @@ main {
 }
 .hero-home-section .hero-home-title {
   margin-bottom: 1.25rem;
+  color: #fdfdfd;
 }
 .hero-home-section .hero-home-subtitle {
   font-size: 1.2rem;
+  color: #fdfdfd;
   margin-bottom: 1.75rem;
 }
 .hero-home-section .hero-home-btn {
@@ -368,9 +381,11 @@ main {
 .home-services-quote .home-services-blockquote .home-blockquote-quote {
   font-size: 1.75rem;
   font-style: italic;
+  color: #fdfdfd;
 }
 .home-services-quote .home-services-blockquote .home-blockquote-author {
   font-size: 1.25rem;
+  color: #fdfdfd;
 }
 
 .home-contact-wrapper {
@@ -413,10 +428,12 @@ main {
 .home-contact-wrapper .home-contact-section .home-contact-title {
   font-size: 2.25rem;
   margin-bottom: 1rem;
+  color: #fdfdfd;
 }
 .home-contact-wrapper .home-contact-section .home-contact-text {
   font-size: 1.35rem;
   margin-bottom: 2.5rem;
+  color: #fdfdfd;
 }
 .home-contact-wrapper .home-contact-section .home-contact-btn {
   padding: 0.75rem 2rem;
@@ -635,10 +652,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background-color: #f6f6f6;
   padding: 2rem 4rem;
+  margin-bottom: 2rem;
 }
 .works-intro-wrapper .works-intro-title {
   margin-bottom: 1.25rem;
+  font-size: 2.25rem;
 }
 .works-intro-wrapper .works-intro-text {
   width: 80%;
@@ -656,17 +676,18 @@ main {
 }
 .landscape-wrapper .landscape-figure {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 .landscape-wrapper .landscape-figure img {
   width: 100%;
   border-radius: 0.25rem;
 }
 .landscape-wrapper .landscape-title {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 .landscape-wrapper .landscape-text {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .work-cards-wrapper {
@@ -675,6 +696,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem;
+  background-color: #f6f6f6;
 }
 .work-cards-wrapper .work-cards-card {
   width: 45%;
@@ -692,10 +714,10 @@ main {
   border-radius: 0.25rem;
 }
 .work-cards-wrapper .work-cards-card .work-cards-title {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .work-cards-wrapper .work-cards-card .work-cards-text {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media all and (max-width: 480px) {
@@ -704,6 +726,9 @@ main {
   }
   .landscape-wrapper {
     padding: 2rem 1rem;
+  }
+  .landscape-wrapper .landscape-title {
+    font-size: 1.5rem;
   }
   .work-cards-wrapper {
     padding: 1rem;
@@ -741,10 +766,10 @@ main {
 }
 @media all and (max-width: 991px) {
   .landscape-wrapper .landscape-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   .work-cards-wrapper .work-cards-card .work-cards-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 #error-main {

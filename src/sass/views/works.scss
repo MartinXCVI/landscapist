@@ -11,9 +11,12 @@
 .works-intro-wrapper {
   width: 100%;
   @include mx.flexCol(center, flex-start);
+  background-color: color.$whiteSmoke;
   padding: 2rem 4rem;
+  margin-bottom: 2rem;
   .works-intro-title {
     margin-bottom: 1.25rem;
+    font-size: 2.25rem;
   }
   .works-intro-text {
     width: 80%;
@@ -28,17 +31,18 @@
   padding: 2rem 4rem;
   .landscape-figure {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     img {
       width: 100%;
       border-radius: 0.25rem;
     }
   }
   .landscape-title {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
   }
   .landscape-text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -46,6 +50,7 @@
   width: 100%;
   @include mx.flexRow(var.$evenly, center);
   padding: 2rem;
+  background-color: color.$whiteSmoke;
   .work-cards-card {
     width: 45%;
     @include mx.flexCol(center, flex-start);
@@ -58,10 +63,10 @@
       }
     }
     .work-cards-title {
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
     }
     .work-cards-text {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -74,6 +79,9 @@
 
   .landscape-wrapper {
     padding: 2rem 1rem;
+    .landscape-title {
+      font-size: 1.5rem;
+    }
   }
 
   .work-cards-wrapper {
@@ -113,19 +121,18 @@
   }
 }
 
-
 @media all and (max-width: 991px) {
 
   .landscape-wrapper {
     .landscape-title {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
 
   .work-cards-wrapper {
     .work-cards-card {
       .work-cards-title {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
