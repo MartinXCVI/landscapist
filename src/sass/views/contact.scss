@@ -16,8 +16,8 @@
 }
 
 .form-wrapper {
-  width: 40%;
-  min-width: 40%;
+  width: 45%;
+  min-width: 45%;
   min-height: 100vh;
   @include mx.flexColCenter();
   padding: 2rem;
@@ -69,6 +69,12 @@
       background-color: transparent;
       border: 1px solid color.$white;
       border-radius: 0.25rem;
+    }
+    .contact-input {
+      transition: var.$trs03;
+      &::placeholder {
+        color: color.$softerGrey;
+      }
     }
   }
 }
@@ -164,19 +170,6 @@
   .form-buttons {
     .form-btn {
       width: 9.5rem;
-    }
-  }
-}
-
-@media all and (min-width: 1201px) and (max-width: 1280px) {
-
-  .form-wrapper {
-    width: 45%;
-  }
-
-  .form-buttons {
-    .form-btn {
-      width: 9.75rem;
     }
   }
 }

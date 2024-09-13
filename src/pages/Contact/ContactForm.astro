@@ -4,23 +4,67 @@
       <legend>Contact Us</legend>
       <div class="contact-div">
         <label for="fullname-input" class="form-label"><i class="fa-solid fa-user"></i> Fullname</label>
-        <input type="text" class="form-input" name="fullname" id="fullname-input">
+        <input
+          type="text"
+          class="form-input contact-input" 
+          name="fullname" 
+          id="fullname-input"
+          minlength="3"
+          maxlength="75"
+          placeholder="Your full name here"
+          required
+        >
       </div>
       <div class="contact-div">
         <label for="email-input" class="form-label"><i class="fa-solid fa-envelope"></i> Email</label>
-        <input type="email" class="form-input" name="email" id="email-input">
+        <input
+          type="email" 
+          class="form-input contact-input" 
+          name="email" 
+          id="email-input"
+          maxlength="120"
+          placeholder="Your email address here"
+          required
+        >
       </div>
       <div class="contact-div">
         <label for="phone-input" class="form-label"><i class="fa-solid fa-phone"></i> Phone</label>
-        <input type="tel" class="form-input" name="phone" id="phone-input">
+        <input
+          type="tel"
+          class="form-input contact-input" 
+          name="phone" 
+          id="phone-input"
+          minlength="10"
+          maxlength="10"
+          placeholder="Your phone number here"
+          required
+        >
       </div>
       <div class="contact-div">
         <label for="subject-input" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Subject</label>
-        <input type="text" class="form-input" name="subject" id="subject-input">
+        <input 
+          type="text" 
+          class="form-input contact-input" 
+          name="subject" 
+          id="subject-input"
+          minlength="6"
+          maxlength="70"
+          placeholder="Your message's subject here"
+          required
+        >
       </div>
       <div class="contact-div">
         <label for="message-input" class="form-label"><i class="fa-solid fa-message"></i> Message</label>
-        <textarea name="message" class="form-textarea" rows="5" id="message-input"></textarea>
+        <textarea
+          name="message" 
+          class="form-textarea contact-input" 
+          rows="5" 
+          id="message-input"
+          minlength="30"
+          maxlength="500"
+          placeholder="Your detailed message here"
+          required
+        ></textarea>
       </div>
     </fieldset>
     <div class="form-buttons">
