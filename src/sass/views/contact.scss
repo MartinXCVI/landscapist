@@ -24,10 +24,10 @@
   position: relative;
   &::before {
     transition: var.$trs03;
-    @include mx.bgColor(-3, color.$black, 0.3);
+    @include mx.bgColor(-3, color.$black, 0.4);
   }
   &:hover::before {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .contact-form {
     width: 100%;
