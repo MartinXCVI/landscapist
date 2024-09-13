@@ -1,0 +1,182 @@
+@use '../includes/colors' as color;
+@use '../includes/mixins' as mx;
+@use '../includes/typography' as font;
+@use '../includes/variables' as var;
+
+.contact-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  &::before {
+    @include mx.bgColor(-3, color.$softerBlack, 0.1);
+  }
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/contact-bg.jpg', 0.7);
+  }
+}
+
+.form-wrapper {
+  width: 40%;
+  min-width: 40%;
+  min-height: 100vh;
+  @include mx.flexColCenter();
+  padding: 2rem;
+  position: relative;
+  &::before {
+    transition: var.$trs03;
+    @include mx.bgColor(-3, color.$black, 0.3);
+  }
+  &:hover::before {
+    opacity: 0.7;
+  }
+  .contact-form {
+    width: 100%;
+    @include mx.flexColCenter();
+    color: color.$white;
+  }
+}
+
+.contact-field {
+  width: 100%;
+  @include mx.flexColCenter();
+  border-top: 1px solid color.$white;
+  legend {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-inline: 1rem;
+  }
+  .contact-div {
+    width: 100%;
+    @include mx.flexCol(center, flex-start);
+    margin-bottom: 0.75rem;
+    .form-label {
+      width: 100%;
+      padding-left: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.25rem 0.75rem;
+      background-color: transparent;
+      border: 1px solid color.$white;
+      border-radius: 3rem;
+    }
+    .form-textarea {
+      width: 100%;
+      resize: none;
+      padding: 0.25rem 0.75rem;
+      background-color: transparent;
+      border: 1px solid color.$white;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.form-buttons {
+  width: 100%;
+  @include mx.flexRow(var.$evenly, center);
+  padding: 1rem;
+  .form-btn {
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    transition: var.$trs03;
+    font-size: 1rem;
+  }
+  .send-btn {
+    @include mx.btnStyle(color.$thirdColor, color.$white, color.$thirdColor, 3rem);
+    &:hover {
+      @include mx.colorize(springgreen, color.$white);
+      border-color: springgreen;
+    }
+  }
+  .clear-btn {
+    @include mx.btnStyle(color.$fifthColor, color.$white, color.$fifthColor, 3rem);
+    &:hover {
+      @include mx.colorize(blue, color.$white);
+      border-color: blue;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+
+  .form-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .form-buttons {
+    @include mx.flexColCenter();
+    padding: 1rem 0rem;
+    .form-btn {
+      width: 100%;
+    }
+    .send-btn {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 575px) {
+
+  .form-wrapper {
+    .contact-form {
+      width: 90%;
+    }
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+
+  .form-wrapper {
+    .contact-form {
+      width: 75%;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+  .form-wrapper {
+    width: 55%;
+  }
+
+  .form-buttons {
+    .form-btn {
+      width: 9rem;
+    }
+  }
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+
+  .form-wrapper {
+    width: 50%;
+  }
+
+  .form-buttons {
+    .form-btn {
+      width: 9.5rem;
+    }
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 1280px) {
+
+  .form-wrapper {
+    width: 45%;
+  }
+
+  .form-buttons {
+    .form-btn {
+      width: 9.75rem;
+    }
+  }
+}

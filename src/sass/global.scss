@@ -66,6 +66,10 @@ main {
   min-height: 70vh;
 }
 
+button {
+  cursor: pointer;
+}
+
 .capital {
   text-transform: capitalize;
 }

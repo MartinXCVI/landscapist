@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import Header from '../components/Header.astro';
 import Logo from '../components/Logo.astro';
 import Navbar from '../components/Navbar.astro';
+import ContactWrapper from './Contact/ContactWrapper.astro';
+import ContactForm from "./Contact/ContactForm.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -13,7 +15,10 @@ import Footer from "../components/Footer.astro";
 		<Navbar />
 	</Header>
   <main>
-    
+		<ContactWrapper>
+			<ContactForm />
+		</ContactWrapper>
   </main>
   <Footer />
+	<script src="../scripts/contactValidation.js"></script>
 </Layout>
