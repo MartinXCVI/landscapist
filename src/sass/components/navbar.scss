@@ -12,15 +12,17 @@
   min-width: 100%;
   @include mx.flexRow(var.$evenly, center);
   .nav-item {
+    padding: 1rem;
     .nav-link {
       font-family: font.$titleFont;
       color: color.$lightBlack;
+      padding: 1rem;
     }
   }
 }
 
 @media all and (max-width: 991px) {
   .nav-list {
-    @include mx.flexCol(var.$between, center);
+    @include mx.flexCol(center, center);
   }
 }
