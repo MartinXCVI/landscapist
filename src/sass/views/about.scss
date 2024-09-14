@@ -18,12 +18,35 @@
     }
     .about-intro-fig {
       width: 100%;
+      @include mx.flexColCenter;
       margin-top: 3rem;
       margin-bottom: 2rem;
+      position: relative;
+      transition: var.$trs03;
       img {
         width: 100%;
+        cursor: pointer;
+        transition: var.$trs05;
+        &:hover {
+          opacity: 0;
+          filter: blur(1rem);
+        }
       }
     }
+  }
+}
+
+.about-fig-1 {
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/about-intro-hover.jpg', 0.9);
+    border-radius: 0.25rem;
+  }
+}
+
+.about-fig-2 {
+  &::after {
+    @include mx.bgHeroImg(-5, '/images/about-intro-2-hover.jpg', 0.9);
+    border-radius: 0.25rem;
   }
 }
 

@@ -1,5 +1,6 @@
 ---
 import '../css/styles.css'
+import 'aos/dist/aos.css';
 
 interface Props {
 	title: string;
@@ -21,5 +22,9 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 		<script src="../scripts/hamMenu.js"></script>
+		<script> 
+			import AOS from "aos";
+			AOS.init(); 
+		</script>
 	</body>
 </html>

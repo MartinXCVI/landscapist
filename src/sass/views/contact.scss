@@ -7,6 +7,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  z-index: 10;
   &::before {
     @include mx.bgColor(-3, color.$softerBlack, 0.1);
   }
@@ -142,6 +143,12 @@
 }
 
 @media all and (max-width: 767px) {
+
+  .contact-wrapper {
+    &::after {
+      background-position: 70%;
+    }
+  }
 
   .form-wrapper {
     width: 100%;

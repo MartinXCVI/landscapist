@@ -14,6 +14,14 @@
   text-decoration: none;
   list-style: none;
 }
+*::selection {
+  background-color: #007000;
+  color: #fdfdfd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #fdfdfd;
@@ -75,6 +83,10 @@ button {
   text-transform: capitalize;
 }
 
+.over-x {
+  overflow-x: hidden;
+}
+
 @media all and (max-width: 575px) {
   p {
     font-size: 1rem;
@@ -87,6 +99,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0.25rem 0.25rem 0 #d3d3d3;
   padding: 1rem 2rem;
 }
 
@@ -195,6 +208,9 @@ button {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
 }
+.logo-div h1 .logo-link {
+  color: initial;
+}
 
 @media all and (max-width: 991px) {
   .logo-div {
@@ -295,6 +311,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  box-shadow: 0 -0.25rem 0.25rem 0 #d3d3d3;
 }
 .footer-element .navbar {
   width: 35%;
@@ -349,6 +366,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 10;
   color: #fdfdfd;
   text-shadow: 0 0 0.25rem #151515;
   text-align: center;
@@ -556,6 +574,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 10;
 }
 .home-contact-wrapper::before {
   content: "";
@@ -761,11 +780,49 @@ button {
 }
 .about-intro-wrapper .about-intro .about-intro-fig {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  position: relative;
+  transition: 0.3s linear all;
 }
 .about-intro-wrapper .about-intro .about-intro-fig img {
   width: 100%;
+  cursor: pointer;
+  transition: 0.5s linear all;
+}
+.about-intro-wrapper .about-intro .about-intro-fig img:hover {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.about-fig-1::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -5;
+  background-image: url("/images/about-intro-hover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  border-radius: 0.25rem;
+}
+
+.about-fig-2::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -5;
+  background-image: url("/images/about-intro-2-hover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  border-radius: 0.25rem;
 }
 
 @media all and (max-width: 480px) {
@@ -1012,6 +1069,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 10;
 }
 .services-quote-wrapper .services-blockquote {
   width: 50%;
@@ -1150,6 +1208,7 @@ button {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  z-index: 10;
 }
 .contact-wrapper::before {
   content: "";
@@ -1323,6 +1382,9 @@ button {
   }
 }
 @media all and (max-width: 767px) {
+  .contact-wrapper::after {
+    background-position: 70%;
+  }
   .form-wrapper {
     width: 100%;
   }

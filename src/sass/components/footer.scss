@@ -6,6 +6,7 @@
 .footer-element {
   @include mx.flexRow(var.$between, center);
   padding: 1rem 2rem;
+  box-shadow: 0 -0.25rem 0.25rem 0 color.$softGrey;
   .navbar {
     width: 35%;
     .close-container {

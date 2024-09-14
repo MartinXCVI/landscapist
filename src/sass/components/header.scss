@@ -6,6 +6,7 @@
 .header-element {
   width: 100%;
   @include mx.flexRow(var.$between, center);
+  box-shadow: 0 0.25rem 0.25rem 0 color.$softGrey;
   padding: 1rem 2rem;
 }
 
