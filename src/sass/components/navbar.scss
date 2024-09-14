@@ -21,8 +21,60 @@
   }
 }
 
+@media all and (min-width: 481px) and (max-width: 767px) {
+
+  .nav-list {
+    .nav-item {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+  .nav-list {
+    .nav-item {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 @media all and (max-width: 991px) {
   .nav-list {
     @include mx.flexCol(center, center);
+  }
+}
+
+@media all and (min-width: 992px) {
+
+  .nav-list {
+    .nav-item {
+      .nav-link {
+        position: relative;
+        &::before {
+          width: 0;
+          content: '';
+          position: absolute;
+          background-color: color.$firstColor;
+          height: 0.1rem;
+          right: 0;
+          bottom: 0.5rem;
+          transition: var.$trs03;
+        }
+        &::after {
+          width: 0;
+          content: '';
+          position: absolute;
+          background-color: color.$firstColor;
+          height: 0.1rem;
+          left: 0;
+          bottom: 0.5rem;
+          transition: var.$trs03;
+        }
+        &:hover::after, &:hover::before {
+          width: 100%;
+        }
+      }
+    }
   }
 }

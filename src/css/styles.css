@@ -87,7 +87,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 @media all and (max-width: 991px) {
@@ -223,12 +223,50 @@ button {
   padding: 1rem;
 }
 
+@media all and (min-width: 481px) and (max-width: 767px) {
+  .nav-list .nav-item {
+    font-size: 1.25rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .nav-list .nav-item {
+    font-size: 1.5rem;
+  }
+}
 @media all and (max-width: 991px) {
   .nav-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media all and (min-width: 992px) {
+  .nav-list .nav-item .nav-link {
+    position: relative;
+  }
+  .nav-list .nav-item .nav-link::before {
+    width: 0;
+    content: "";
+    position: absolute;
+    background-color: #007000;
+    height: 0.1rem;
+    right: 0;
+    bottom: 0.5rem;
+    transition: 0.3s linear all;
+  }
+  .nav-list .nav-item .nav-link::after {
+    width: 0;
+    content: "";
+    position: absolute;
+    background-color: #007000;
+    height: 0.1rem;
+    left: 0;
+    bottom: 0.5rem;
+    transition: 0.3s linear all;
+  }
+  .nav-list .nav-item .nav-link:hover::after, .nav-list .nav-item .nav-link:hover::before {
+    width: 100%;
   }
 }
 .ham-container {
@@ -256,7 +294,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 .footer-element .navbar {
   width: 35%;
@@ -267,6 +305,7 @@ button {
 
 @media all and (max-width: 991px) {
   .footer-element {
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,7 +315,8 @@ button {
     margin-bottom: 2rem;
   }
   .footer-element .navbar .nav-list .nav-item {
-    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
   }
 }
 .social-media-wrapper {

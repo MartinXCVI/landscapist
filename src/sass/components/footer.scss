@@ -5,7 +5,7 @@
 
 .footer-element {
   @include mx.flexRow(var.$between, center);
-  padding: 2rem;
+  padding: 1rem 2rem;
   .navbar {
     width: 35%;
     .close-container {
@@ -17,12 +17,14 @@
 @media all and (max-width: 991px) {
 
   .footer-element {
+    padding: 2rem 2rem;
     @include mx.flexColCenter();
     .navbar {
       margin-bottom: 2rem;
       .nav-list {
         .nav-item {
-          margin-bottom: 0.5rem;
+          padding: 0.5rem 1rem;
+          margin-bottom: 0.25rem;
         }
       }
     }
