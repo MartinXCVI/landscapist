@@ -12,7 +12,7 @@ closeIcon.addEventListener('click', ()=> {
 })
 
 function displayMenu() {
-  navMenu.style.minHeight = '101vh'
+  navMenu.style.minHeight = '105vh'
   navMenu.style.overflow = 'unset'
   closeIcon.style.opacity = '0.9'
 }
