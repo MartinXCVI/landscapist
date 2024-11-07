@@ -17,7 +17,6 @@ function displayMenu() {
   navMenu.style.height = '105vh'
   navMenu.style.overflow = 'unset'
   closeIcon.style.opacity = '0.9'
-  body.style.overflow = 'hidden'
 }
 
 function hideMenu() {
@@ -25,5 +24,4 @@ function hideMenu() {
   navMenu.style.height = '0vh'
   navMenu.style.overflow = 'hidden'
   closeIcon.style.opacity = '0'
-  body.style.overflow = 'unset'
 }
