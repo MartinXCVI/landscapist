@@ -258,6 +258,10 @@ button {
   }
 }
 @media all and (min-width: 992px) {
+  .navbar {
+    min-height: unset !important;
+    height: unset !important;
+  }
   .nav-list .nav-item .nav-link {
     position: relative;
   }
