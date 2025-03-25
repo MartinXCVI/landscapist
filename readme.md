@@ -1,6 +1,6 @@
 # Landscapist
 
-![Landscapist cover screenshot](/public/images/landscapist-cover.png 'Landscapist in desktop version')
+![Landscapist cover screenshot](./public/images/landscapist-cover.png 'Landscapist in desktop version')
 
 ## 📄 Introduction
 
@@ -16,19 +16,23 @@ Use of **AOS** libraries for animations on scroll. Styling with **SASS** for a c
 - AOS (Animate on Scroll)
 - Web3Forms
 
+---
+
 ## 👁️ View of the Project
 
 ### Cloning it
 
 Copy the command below with the link:
 
-```
-git clone https://github.com/MartinXCVI/landscapist
+```bash
+git clone https://github.com/MartinXCVI/landscapist.git
 ```
 
 ### Live in Vercel
 
 [**Click here to see it live**](https://landscapist.vercel.app/)
+
+---
 
 ## 💻 Commands
 
@@ -45,6 +49,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run styles`          | Compile .sass and .scss files to .css files      |
 |                           |                                                  |
 
+---
+
 ## 📚 Learn More
 
 - [Astro official documentation](https://docs.astro.build)
@@ -52,6 +58,14 @@ All commands are run from the root of the project, from a terminal:
 - [SASS official documentation](https://sass-lang.com/)
 - [AOS repository](https://github.com/michalsnik/aos/tree/v2)
 - [Web3Forms official documentation](https://web3forms.com/)
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
 ## 🧑‍💻 Developer
 
