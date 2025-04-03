@@ -8,7 +8,6 @@
   border: 0;
   margin: 0;
   padding: 0;
-  outline: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
@@ -175,19 +174,23 @@ button {
     z-index: 100;
   }
   .header-element .navbar .close-container .close-icon {
-    cursor: pointer;
     padding: 0.75rem 1rem;
-    border: 1px solid #fdfdfd;
+    border: 2px solid #151515;
     border-radius: 100%;
-    color: #fdfdfd;
+    color: #151515;
     font-size: 1.5rem;
     transition: 1s linear all;
     opacity: 0;
   }
   .header-element .navbar .close-container .close-icon:hover {
-    background-color: #fdfdfd;
-    color: #151515;
+    border-color: #009100;
+    color: #009100;
     transition: 0.3s linear all;
+  }
+  .header-element .navbar .close-container .close-btn {
+    cursor: pointer;
+    border-radius: 100%;
+    color: black;
   }
 }
 @media all and (min-width: 992px) {

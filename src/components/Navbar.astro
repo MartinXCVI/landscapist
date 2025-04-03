@@ -1,10 +1,12 @@
-<nav class="navbar">
+<nav class="navbar" role="menu">
   <div class="close-container">
-    <i class="fa-solid fa-xmark close-icon"></i>
+    <button class="close-btn close-icon" id="close-menu" aria-label="Close menu">
+      <i class="fa-solid fa-xmark "></i>
+    </button>
   </div>
-  <ul class="nav-list">
+  <ul class="nav-list" role="menubar">
     <li class="nav-item">
-      <a class="nav-link" href="/" title="Go to Home page">
+      <a class="nav-link" href="/" title="Go to Home page" role="menuitem">
         Home
       </a>
     </li>
@@ -24,7 +26,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/contact#form-wrapper" title="Go to Contact page">
+      <a class="nav-link" href="/contact" title="Go to Contact page">
         Contact
       </a>
     </li>

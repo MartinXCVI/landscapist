@@ -11,7 +11,7 @@ Use of **AOS** libraries for animations on scroll. Styling with **SASS** for a c
 ### Developed with:
 
 - Astro Framework
-- JavaScript
+- TypeScript
 - SASS
 - AOS (Animate on Scroll)
 - Web3Forms
@@ -20,15 +20,38 @@ Use of **AOS** libraries for animations on scroll. Styling with **SASS** for a c
 
 ## 👁️ View of the Project
 
-### Cloning it
+### Clone it
 
 Copy the command below with the link:
 
 ```bash
 git clone https://github.com/MartinXCVI/landscapist.git
+cd landscapist
 ```
 
-### Live in Vercel
+#### Install Dependencies
+
+```bash
+npm install
+```
+
+#### Environment Variables
+
+First, [get your Web3Forms key here](https://web3forms.com/). Then create a `.env` file in the root directory and configure the following variable:
+
+```
+WEB3_FORMS_API_KEY=<Your_Web3Forms_API_Key_Here>
+```
+
+#### Run The Project Locally:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deployed on Vercel
 
 [**Click here to see it live**](https://landscapist.vercel.app/)
 
@@ -54,6 +77,7 @@ All commands are run from the root of the project, from a terminal:
 ## 📚 Learn More
 
 - [Astro official documentation](https://docs.astro.build)
+- [TypeScript official documentation](https://www.typescriptlang.org/docs/)
 - [Astro Discord server](https://astro.build/chat)
 - [SASS official documentation](https://sass-lang.com/)
 - [AOS repository](https://github.com/michalsnik/aos/tree/v2)
