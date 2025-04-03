@@ -1,0 +1,130 @@
+---
+const ACCESS_KEY: string = import.meta.env.WEB3_FORMS_API_KEY
+
+if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
+---
+
+<section
+  class="form-wrapper"
+  id="form-wrapper"
+  data-aos="fade-right"
+  data-aos-duration="1750"
+>
+  <form method="POST" class="contact-form" id="contact-form">
+    <fieldset class="contact-field" aria-labelledby="contact-form-title">
+      <legend id="contact-form-title">
+        Contact Us
+      </legend>
+      <input type="hidden" name="access_key" value={ACCESS_KEY}>
+      <input type="hidden" name="from_name" value="Landscapist">
+      <input type="checkbox" name="botcheck" id="" style="display: none;" aria-hidden="true">
+      <!---- Full Name ---->
+      <div class="contact-div">
+        <label for="fullname-input" class="form-label">
+          <i class="fa-solid fa-user" aria-hidden="true"></i> Fullname
+        </label>
+        <input
+          type="text"
+          class="form-input contact-input" 
+          name="fullname" 
+          id="fullname-input"
+          minlength="3"
+          maxlength="75"
+          placeholder="Your full name here"
+          aria-label="Full Name"
+          required
+        >
+      </div>
+      <!---- Email ---->
+      <div class="contact-div">
+        <label for="email-input" class="form-label">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
+        </label>
+        <input
+          type="email" 
+          class="form-input contact-input" 
+          name="email" 
+          id="email-input"
+          maxlength="120"
+          placeholder="Your email address here"
+          aria-label="Email"
+          autocomplete="on"
+          required
+        >
+      </div>
+      <!---- Phone ---->
+      <div class="contact-div">
+        <label for="phone-input" class="form-label">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> Phone
+        </label>
+        <input
+          type="tel"
+          class="form-input contact-input" 
+          name="phone" 
+          id="phone-input"
+          minlength="7"
+          maxlength="15"
+          placeholder="Your phone number here"
+          aria-label="Phone"
+          autocomplete="on"
+          required
+        >
+      </div>
+      <!---- Subject ---->
+      <div class="contact-div">
+        <label for="subject-input" class="form-label">
+          <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Subject
+        </label>
+        <input 
+          type="text" 
+          class="form-input contact-input" 
+          name="subject" 
+          id="subject-input"
+          minlength="6"
+          maxlength="70"
+          placeholder="Your message's subject here"
+          aria-label="Subject"
+          required
+        >
+      </div>
+      <!---- Message ---->
+      <div class="contact-div">
+        <label for="message-input" class="form-label">
+          <i class="fa-solid fa-message" aria-hidden="true"></i> Message
+        </label>
+        <textarea
+          name="message" 
+          class="form-textarea contact-input" 
+          rows="5" 
+          id="message-input"
+          minlength="30"
+          maxlength="500"
+          placeholder="Your detailed message here"
+          aria-label="Message"
+          required
+        ></textarea>
+      </div>
+    </fieldset>
+    <!---- * BUTTONS * ---->
+    <section class="form-buttons" aria-label="Form buttons section">
+      <button
+        type="submit"
+        class="form-btn send-btn"
+        title="Submit form with consultation request"
+        aria-label="Submit form with consultation request"
+      >
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send
+      </button>
+      <button
+        type="reset"
+        class="form-btn clear-btn"
+        title="Clear all form fields"
+        aria-label="Clear all form fields"
+      >
+        <i class="fa-solid fa-broom" aria-hidden="true"></i> Clear
+      </button>
+    </section>
+    <!--- * Result Message * --->
+    <p id="contact-result" role="status" aria-live="polite"></p>
+  </form>
+</section>

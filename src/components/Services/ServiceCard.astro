@@ -1,0 +1,28 @@
+---
+interface Props {
+  reverse?: string;
+  dataAos: string;
+  img: string;
+  alt: string;
+  titleId: string
+  title: string;
+  text :string;
+}
+
+const { reverse, dataAos, img, alt, titleId, title, text } = Astro.props as Props
+---
+
+<article class=`service-card ${reverse}` aria-labelledby={titleId}>
+  <figure class="service-card-fig" data-aos={dataAos} data-aos-duration="1500">
+    <img src={img} alt={alt} title={alt}>
+  </figure>
+  <article class="service-card-info" data-aos="fade-up" data-aos-duration="2000">
+    <h2 class="service-card-title capital" id={titleId}>
+      {title}
+    </h2>
+    <p class="service-card-text">{text}</p>
+    <a class="service-card-btn capital" href="/Contact" title="Get a quote for this service">
+      get a quote
+    </a>
+  </article>
+</article>

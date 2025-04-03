@@ -1,0 +1,25 @@
+---
+import { myInfo } from "@data/myInfo"
+
+const { companyName } = myInfo
+---
+
+<section class="home-intro-wrapper" aria-labelledby="home-intro-title">
+  <section class="home-intro-section" data-aos="fade-up" data-aos-duration="1000">
+    <article class="home-introduction">
+      <h2 class="home-intro-title" id="home-intro-title">
+        Elegant artistry on beautifying nature
+      </h2>
+      <p class="home-intro-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam illo architecto repellat nostrum vero at optio ratione ullam, nulla ducimus nesciunt et aperiam atque magnam quis? Consequuntur ea quia iure!
+      </p>
+      <a
+        class="home-intro-btn"
+        href="/Works"
+        title={`See ${companyName}'s portfolio of works`}
+      >
+        Explore our works
+      </a>
+    </article>
+  </section>
+</section>

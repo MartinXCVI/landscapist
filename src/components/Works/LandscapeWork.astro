@@ -1,0 +1,21 @@
+---
+interface Props {
+  img: string;
+  alt: string;
+  title: string,
+  titleId: string,
+  text: string
+}
+
+const { img, alt, title, text, titleId } = Astro.props as Props
+---
+
+<article class="landscape-wrapper" role="region" aria-labelledby={titleId}>
+  <figure class="landscape-figure" data-aos="zoom-in" data-aos-duration="1500">
+    <img src={img} alt={alt} title={alt}>
+  </figure>
+  <h3 class="landscape-title capital" id={titleId}>
+    {title}
+  </h3>
+  <p class="landscape-text">{text}</p>
+</article>

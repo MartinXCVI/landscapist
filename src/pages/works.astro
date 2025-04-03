@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 
-import Header from '../components/Header.astro';
-import Logo from '../components/Logo.astro';
-import Navbar from '../components/Navbar.astro';
-import WorksIntro from './Works/WorksIntro.astro';
-import LandscapeWork from "./Works/LandscapeWork.astro";
-import WorksCards from "./Works/WorksCards.astro";
-import Footer from "../components/Footer.astro";
+import Header from '@components/Header.astro';
+import Logo from '@components/Logo.astro';
+import Navbar from '@components/Navbar.astro';
+import WorksIntro from '@components/Works/WorksIntro.astro';
+import LandscapeWork from "@components/Works/LandscapeWork.astro";
+import WorksCards from "@components/Works/WorksCards.astro";
+import Footer from "@components/Footer.astro";
 ---
 
 <Layout title="Landscapist: Works">
@@ -19,49 +19,58 @@ import Footer from "../components/Footer.astro";
 		<WorksIntro />
 		<LandscapeWork 
 			img="/images/works-img/landscape-work-1.jpg"
-			alt="alt text"
+			alt="Beautiful country house among trees"
 			title="historic country house"
+			titleId="historic-country-house-title"
 			text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita repudiandae alias commodi odit aliquam sed tempora, dolores ab? Et quod, rem ab sunt adipisci autem voluptatibus itaque neque minima deserunt sequi alias voluptas, quisquam dicta similique in perspiciatis exercitationem ratione numquam. Maiores quam excepturi dolorum hic neque cumque error nemo!"
 		/>
 		<WorksCards
 			img1="/images/works-img/works-img-1.jpg"
-			alt1="alt text"
+			alt1="Fascinating interior gardens on the sides of a path"
+			titleId1="interior-design-title"
 			title1="interior design"
 			text1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores, totam voluptas delectus vel nisi veniam dolorem facilis numquam laboriosam!"
 			img2="/images/works-img/works-img-2.jpg"
-			alt2="alt text"
+			alt2="swimming pool surrounded by a paradisiac design"
+			titleId2="pool-paradise-title"
 			title2="pool paradise"
 			text2="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor autem nisi ut cupiditate expedita pariatur provident aliquid beatae aspernatur iusto."
 		/>
 		<LandscapeWork 
 			img="/images/works-img/landscape-work-2.jpg"
-			alt="alt text"
+			alt="A neat tree-lined path"
 			title="comfortable trees path"
+			titleId="trees-path-title"
 			text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita repudiandae alias commodi odit aliquam sed tempora, dolores ab? Et quod, rem ab sunt adipisci autem voluptatibus itaque neque minima deserunt sequi alias voluptas, quisquam dicta similique in perspiciatis exercitationem ratione numquam. Maiores quam excepturi dolorum hic neque cumque error nemo!"
 		/>
 		<WorksCards
 			img1="/images/works-img/works-img-3.jpg"
-			alt1="alt text"
+			alt1="Heavenly and spacious backyard"
+			titleId1="heavenly-backyard-title"
 			title1="heavenly backyard"
 			text1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores, totam voluptas delectus vel nisi veniam dolorem facilis numquam laboriosam!"
 			img2="/images/works-img/works-img-4.jpg"
-			alt2="alt text"
+			alt2="Colorful and inspiring flowers garden"
+			titleId2="inspirations-garden-title"
 			title2="inspirations garden"
 			text2="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor autem nisi ut cupiditate expedita pariatur provident aliquid beatae aspernatur iusto."
 		/>
-		<LandscapeWork 
+		<LandscapeWork
 			img="/images/works-img/landscape-work-3.jpg"
-			alt="alt text"
+			alt="Gorgeous landscape design with mountains on the horizon"
 			title="imposing mountains landscape"
+			titleId="mountains-landscape"
 			text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita repudiandae alias commodi odit aliquam sed tempora, dolores ab? Et quod, rem ab sunt adipisci autem voluptatibus itaque neque minima deserunt sequi alias voluptas, quisquam dicta similique in perspiciatis exercitationem ratione numquam. Maiores quam excepturi dolorum hic neque cumque error nemo!"
 		/>
 		<WorksCards
 			img1="/images/works-img/works-img-5.jpg"
-			alt1="alt text"
-			title1="sweeped estate"
+			alt1="Swept and properly arranged estate"
+			titleId1="swept-estate-title"
+			title1="swept estate"
 			text1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores, totam voluptas delectus vel nisi veniam dolorem facilis numquam laboriosam!"
 			img2="/images/works-img/works-img-6.jpg"
-			alt2="alt text"
+			alt2="Eye-catching and neat residence turfing work"
+			titleId2="neat-residence-title"
 			title2="neat residence"
 			text2="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor autem nisi ut cupiditate expedita pariatur provident aliquid beatae aspernatur iusto."
 		/>
