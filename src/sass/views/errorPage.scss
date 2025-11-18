@@ -24,14 +24,17 @@
     .error-title {
       font-size: 4rem;
       margin-bottom: 1.25rem;
+      color: color.$white;
     }
     .error-subtitle {
       font-size: 2.25rem;
       margin-bottom: 0.75rem;
+      color: color.$white;
     }
     .error-text {
       font-size: 1.75rem;
       margin-bottom: 1.80rem;
+      color: color.$white;
     }
     .error-btn {
       @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);

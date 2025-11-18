@@ -1457,14 +1457,17 @@ button {
 #error-main .error-section .error-title {
   font-size: 4rem;
   margin-bottom: 1.25rem;
+  color: #fdfdfd;
 }
 #error-main .error-section .error-subtitle {
   font-size: 2.25rem;
   margin-bottom: 0.75rem;
+  color: #fdfdfd;
 }
 #error-main .error-section .error-text {
   font-size: 1.75rem;
   margin-bottom: 1.8rem;
+  color: #fdfdfd;
 }
 #error-main .error-section .error-btn {
   background-color: transparent;
