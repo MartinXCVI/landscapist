@@ -93,10 +93,10 @@
     }
   }
   &::before {
-    @include mx.bgColor(-3, color.$softerBlack, 0.3);
+    @include mx.bgColor(-3, color.$softerBlack, 0.4);
   }
   &::after {
-    @include mx.bgHeroImg(-5, '/images/services-quote-bg.jpg', 0.7);
+    @include mx.bgHeroImg(-5, '/images/services/services-quote-bg.webp', 0.7);
     filter: blur(0.05rem);
     background-attachment: fixed;
   }

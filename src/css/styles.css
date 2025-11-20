@@ -139,7 +139,7 @@ button {
     inset: 0;
     position: absolute;
     z-index: -30;
-    background-image: url("/images/nav-bg.jpg");
+    background-image: url("/images/components/nav-bg.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -394,7 +394,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/home-bg.jpg");
+  background-image: url("/images/home/home-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -546,7 +546,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/home-quote.jpg");
+  background-image: url("/images/home/home-quote.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -599,7 +599,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/home-contact.jpg");
+  background-image: url("/images/home/home-contact.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -811,7 +811,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/about-intro-hover.jpg");
+  background-image: url("/images/about/about-intro-hover.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -824,7 +824,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/about-intro-2-hover.jpg");
+  background-image: url("/images/about/about-intro-2-hover.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1120,14 +1120,14 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 .services-quote-wrapper::after {
   content: "";
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/services-quote-bg.jpg");
+  background-image: url("/images/services/services-quote-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1233,7 +1233,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/contact-bg.jpg");
+  background-image: url("/images/contact/contact-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1437,7 +1437,7 @@ button {
   inset: 0;
   position: absolute;
   z-index: -5;
-  background-image: url("/images/error-bg.jpg");
+  background-image: url("/images/error/error-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

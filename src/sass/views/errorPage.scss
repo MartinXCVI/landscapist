@@ -12,7 +12,7 @@
     @include mx.bgColor(-3, color.$softerBlack, 0.4);
   }
   &::after {
-    @include mx.bgHeroImg(-5, '/images/error-bg.jpg', 0.8);
+    @include mx.bgHeroImg(-5, '/images/error/error-bg.webp', 0.8);
     filter: blur(0.15rem);
   }
   .error-section {
