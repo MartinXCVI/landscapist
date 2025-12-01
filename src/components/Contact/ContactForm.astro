@@ -1,7 +1,16 @@
 ---
-const ACCESS_KEY: string = import.meta.env.WEB3_FORMS_API_KEY
+// Lucide icons
+import Send from "@lucide/astro/icons/send"
+import BrushCleaning from "@lucide/astro/icons/brush-cleaning"
+import User from "@lucide/astro/icons/user"
+import Mail from "@lucide/astro/icons/mail"
+import Phone from "@lucide/astro/icons/phone"
+import SquarePen from "@lucide/astro/icons/square-pen"
+import MessageSquareText from "@lucide/astro/icons/message-square-text"
 
-if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
+import { config } from "src/config/env"
+
+const ACCESS_KEY: string = config.web3FormsApiKey
 ---
 
 <section
@@ -21,7 +30,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
       <!---- Full Name ---->
       <div class="contact-div">
         <label for="fullname-input" class="form-label">
-          <i class="fa-solid fa-user" aria-hidden="true"></i> Fullname
+          <User size={20} aria-hidden="true" /> Fullname
         </label>
         <input
           type="text"
@@ -38,7 +47,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
       <!---- Email ---->
       <div class="contact-div">
         <label for="email-input" class="form-label">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
+          <Mail size={20} aria-hidden="true" /> Email
         </label>
         <input
           type="email" 
@@ -55,7 +64,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
       <!---- Phone ---->
       <div class="contact-div">
         <label for="phone-input" class="form-label">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i> Phone
+          <Phone size={20} aria-hidden="true" /> Phone
         </label>
         <input
           type="tel"
@@ -73,7 +82,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
       <!---- Subject ---->
       <div class="contact-div">
         <label for="subject-input" class="form-label">
-          <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Subject
+          <SquarePen size={20} aria-hidden="true" /> Subject
         </label>
         <input 
           type="text" 
@@ -90,7 +99,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
       <!---- Message ---->
       <div class="contact-div">
         <label for="message-input" class="form-label">
-          <i class="fa-solid fa-message" aria-hidden="true"></i> Message
+          <MessageSquareText size={20} aria-hidden="true" /> Message
         </label>
         <textarea
           name="message" 
@@ -113,7 +122,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
         title="Submit form with consultation request"
         aria-label="Submit form with consultation request"
       >
-        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send
+        <Send size={18} aria-hidden="true" /> Send
       </button>
       <button
         type="reset"
@@ -121,7 +130,7 @@ if(!ACCESS_KEY) console.error(`Missing environment variable: ${ACCESS_KEY}`)
         title="Clear all form fields"
         aria-label="Clear all form fields"
       >
-        <i class="fa-solid fa-broom" aria-hidden="true"></i> Clear
+        <BrushCleaning size={18} aria-hidden="true" /> Clear
       </button>
     </section>
     <!--- * Result Message * --->

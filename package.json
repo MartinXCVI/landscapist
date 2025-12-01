@@ -11,8 +11,11 @@
     "styles": "sass ./src/sass/styles.scss ./src/css/styles.css --watch"
   },
   "dependencies": {
+    "@lucide/astro": "^0.555.0",
     "aos": "^2.3.4",
-    "astro": "^5.15.9"
+    "astro": "^5.15.9",
+    "simple-icons": "^15.22.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7"

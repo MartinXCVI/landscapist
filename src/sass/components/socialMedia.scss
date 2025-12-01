@@ -7,17 +7,24 @@
   @include mx.flexRowCenter();
   gap: 1rem;
   .social-media-link {
-    color: color.$lightBlack;
     transition: var.$trs03;
-    &:hover {
-      color: color.$firstColor;
+    .social-icon svg {
+      fill: color.$lightBlack;
+      transition: var.$trs03;
     }
-    &:focus {
-      color: color.$thirdColor;
+    &:hover .social-icon svg {
+      fill: color.$firstColor;
+    }
+    &:focus .social-icon svg {
+      fill: color.$thirdColor;
     }
   }
 }
 
 .social-icon {
-  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

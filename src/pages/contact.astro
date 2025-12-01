@@ -9,7 +9,7 @@ import ContactForm from "@components/Contact/ContactForm.astro";
 import Footer from "@components/Footer.astro";
 ---
 
-<Layout title="Landscapist: About">
+<Layout title="Landscapist: Contact">
 	<Header>
 		<Logo />
 		<Navbar />
@@ -20,6 +20,5 @@ import Footer from "@components/Footer.astro";
 		</ContactWrapper>
   </main>
   <Footer />
-	<script src="../helpers/contactSubmit.ts"></script>
-	<script src="../helpers/contactValidation.ts"></script>
+	<script src="../services/contactForm.ts"></script>
 </Layout>

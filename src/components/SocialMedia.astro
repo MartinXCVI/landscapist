@@ -1,5 +1,6 @@
 ---
 import { myInfo } from "@data/myInfo"
+import { siFacebook, siInstagram, siYoutube } from 'simple-icons'
 
 const { companyName, facebook, instagram, youtube } = myInfo
 ---
@@ -14,7 +15,7 @@ const { companyName, facebook, instagram, youtube } = myInfo
     rel="noreferrer noopener"
     aria-label={`Button for going to ${companyName}'s Facebook account`}
   >
-    <i class="fa-brands fa-facebook social-icon" aria-hidden="true"></i>
+    <div class="social-icon" set:html={siFacebook.svg}></div>
   </a>
   <!-- Instagram -->
   <a
@@ -25,7 +26,7 @@ const { companyName, facebook, instagram, youtube } = myInfo
     rel="noreferrer noopener"
     aria-label={`Button for going to ${companyName}'s Instagram account`}
   >
-    <i class="fa-brands fa-instagram social-icon" aria-hidden="true"></i>
+    <div class="social-icon" set:html={siInstagram.svg}></div>
   </a>
   <!-- YouTube -->
   <a
@@ -36,6 +37,6 @@ const { companyName, facebook, instagram, youtube } = myInfo
     rel="noreferrer noopener"
     aria-label={`Button for going to ${companyName}'s YouTube channel`}
   >
-    <i class="fa-brands fa-youtube social-icon" aria-hidden="true"></i>
+    <div class="social-icon" set:html={siYoutube.svg}></div>
   </a>
 </section>
