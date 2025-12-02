@@ -1,5 +1,7 @@
 ---
 import X from "@lucide/astro/icons/x"
+
+import { siteConfig } from "src/config/site.config"
 ---
 
 <nav class="navbar" role="menu">
@@ -8,31 +10,13 @@ import X from "@lucide/astro/icons/x"
       <X size={20} aria-hidden="true" />
     </button>
   </div>
-  <ul class="nav-list" role="menubar">
-    <li class="nav-item">
-      <a class="nav-link" href="/" title="Go to Home page" role="menuitem">
-        Home
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/about" title="Go to About page">
-        About
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/works" title="Go to Works page">
-        Works
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/services" title="Go to Services page">
-        Services
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/contact" title="Go to Contact page">
-        Contact
-      </a>
-    </li>
+  <ul class="nav-list">
+    {siteConfig.nav.map((item) => (
+      <li class="nav-item">
+        <a class="nav-link" href={item.href} title={`Go to ${item.label} page`}>
+          {item.label}
+        </a>
+      </li>
+    ))}
   </ul>
 </nav>

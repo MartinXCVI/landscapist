@@ -5,12 +5,11 @@
 
 .logo-div {
   @include mx.flexRow(center, center);
-  h1 {
-    font-family: font.$titleFont;
-    font-size: 1rem;
-    .logo-link {
-      color: initial;
-    }   
+}
+
+.logo-link {
+  img {
+    width: 2.75rem;
   }
 }
 

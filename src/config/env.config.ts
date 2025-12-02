@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 const envSchema = z.object({
+  SITE_URL: z.string(),
   WEB3_FORMS_API_KEY: z.string().min(1, 'WEB3_FORMS_API_KEY cannot be empty'),
 })
 
@@ -9,8 +10,9 @@ function validateEnv() {
   try {
     return envSchema.parse({
       WEB3_FORMS_API_KEY: import.meta.env.WEB3_FORMS_API_KEY,
+      SITE_URL: import.meta.env.SITE_URL
     })
-  } catch (error) {
+  } catch(error) {
     if(error instanceof z.ZodError) {
       const missingVars = error.errors.map(err => err.path.join('.')).join(', ')
       
@@ -28,6 +30,7 @@ function validateEnv() {
 
       // Returning empty string for development
       return {
+        SITE_URL: 'http://localhost:4321/',
         WEB3_FORMS_API_KEY: '',
       }
     }
@@ -40,6 +43,7 @@ function validateEnv() {
 const env = validateEnv()
 
 export const config = {
+  siteUrl: env.SITE_URL,
   web3FormsApiKey: env.WEB3_FORMS_API_KEY,
   isProduction: import.meta.env.PROD,
   isDevelopment: import.meta.env.DEV,

@@ -43,6 +43,43 @@ First, [get your Web3Forms key here](https://web3forms.com/). Then create a `.en
 WEB3_FORMS_API_KEY=<Your_Web3Forms_API_Key_Here>
 ```
 
+#### Configuration
+
+1. Update `src/config/site.config.ts` with your business information
+2. Update `src/config/env.ts` to add more environment variables
+3. Customize colors in `src/sass/includes/_colors.scss`
+
+#### Routes
+
+All routes are centrally managed in `src/config/routes.config.ts`. 
+
+##### Adding a New Page
+
+1. Define the route:
+```typescript
+// src/config/routes.config.ts
+export const routes = {
+  // ...existing routes
+  newPage: {
+    label: 'New Page',
+    href: '/new-page',
+    description: 'Description for SEO',
+  },
+}
+```
+
+2. Add to navigation:
+```typescript
+nav: [
+  // ...existing routes
+  { label: routes.newPage.label, href: routes.newPage.href },
+]
+```
+
+3. Create the page: `src/pages/new-page.astro`
+
+That's it! The route is now available throughout the site.
+
 #### Run The Project Locally:
 
 ```bash
@@ -82,6 +119,12 @@ All commands are run from the root of the project, from a terminal:
 - [SASS official documentation](https://sass-lang.com/)
 - [AOS repository](https://github.com/michalsnik/aos/tree/v2)
 - [Web3Forms official documentation](https://web3forms.com/)
+
+---
+
+## 📝 Attributions
+
+"Leaf" icon created by <a href="https://www.flaticon.com/free-icons/leaf" title="Landscapist logo">Roundicons - Flaticon</a>
 
 ---
 

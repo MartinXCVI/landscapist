@@ -1,18 +1,16 @@
 ---
-import { myInfo } from '@data/myInfo'
+import { siteConfig } from "src/config/site.config"
 
-const { companyName } = myInfo
+const { business } = siteConfig
 ---
 
 <div class="logo-div" >
-  <h1>
-    <a
-      href="/"
-      class="logo-link"
-      title={`${companyName} logo`}
-      aria-label={`${companyName} logo`}
-    >
-      LOGO
-    </a>
-  </h1>
+  <a
+    href="/"
+    class="logo-link"
+    title={`${business.name} logo`}
+    aria-label={`${business.name} logo`}
+  >
+    <img src="/icons/logo.png" alt={`${business.name} logo`}>
+  </a>
 </div>

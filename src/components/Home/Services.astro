@@ -1,3 +1,9 @@
+---
+import { routes } from "src/config/routes.config"
+
+const { contact } = routes
+---
+
 <section class="home-services-wrapper" aria-label="Landscaping services section">
   <article class="home-services-container bg-grey over-x">
     <figure class="home-services-figure" data-aos="fade-right" data-aos-duration="1000">
@@ -20,7 +26,7 @@
       <p>Shaping gardens with a focus on balance, texture, and subtle beauty, turning everyday spaces into calming retreats. Each design invites slow moments, warm light, and a deeper connection to nature's quiet elegance. Every detail is crafted with intention and care.</p>
       <p>Our approach blends artistic vision with practical layout, creating gardens that inspire while remaining functional and easy to enjoy. From soft pathways to curated plant palettes, we design with purpose, harmony, and natural flow to elevate your outdoor living.</p>
       <p>Whether minimalist or expressive, each garden reflects the character of your home and the rhythm of the landscape around it. We transform simple ideas into inviting spaces that feel effortless, serene, and beautifully alive.</p>
-      <a href="/contact" class="home-services-btn" title="Get a quote for this service">
+      <a href={contact.href} class="home-services-btn" title="Get a quote for this service">
         Get A Quote
       </a>
     </article>
@@ -46,7 +52,7 @@
       <p>We create personalized landscapes that feel welcoming, balanced, and naturally expressive. Through thoughtful planning and refined craftsmanship, every outdoor area becomes an extension of your home's comfort and personality.</p>
       <p>From planting schemes to structural elements, each detail is shaped to enhance how you move, gather, and enjoy your space. We combine functionality with artistic restraint, ensuring your landscape remains timeless, inviting, and easy to care for.</p>
       <p>With a gentle mix of creativity and precision, we build outdoor environments that evolve gracefully through the seasons. Your yard becomes a place to unwind, reconnect, and experience the subtle charm of intentional design.</p>
-      <a href="/contact" class="home-services-btn" title="Get a quote for this service">
+      <a href={contact.href} class="home-services-btn" title="Get a quote for this service">
         Get A Quote
       </a>
     </article>
@@ -80,7 +86,7 @@
       <p>We maintain lawns with a focus on clarity, health, and vibrant simplicity. Each visit ensures your turf remains smooth, tidy, and comfortably green, creating a clean foundation for the rest of your landscape. Our care is steady, precise, and reliable.</p>
       <p>Through mindful treatments and routine upkeep, we enhance the natural vigor of your grass, encouraging even growth and long-lasting freshness. We work with quiet consistency, allowing your lawn to stay beautiful without demanding your time.</p>
       <p>The result is a polished, breathable stretch of green that elevates your entire outdoor space. Clean lines, healthy roots, and an understated sense of order come together to form a yard that feels intentionally maintained and effortlessly bright.</p>
-      <a href="/contact" class="home-services-btn" title="Get a quote for this service">
+      <a href={contact.href} class="home-services-btn" title="Get a quote for this service">
         Get A Quote
       </a>
     </article>
@@ -106,7 +112,7 @@
       <p>Our mowing practices emphasize rhythm, accuracy, and a soft respect for your landscape’s natural contours. Each cut is intentional, promoting healthy growth and a smooth, refined appearance throughout your yard. The result is clarity without excess.</p>
       <p>Using balanced patterns and consistent timing, we maintain uniform texture and dependable freshness. Every session is guided by a minimalist philosophy: remove just enough, preserve what matters, and enhance the quiet beauty already present.</p>
       <p>This careful approach creates a lawn that feels calm, orderly, and welcoming. The subtle lines of well-executed mowing add structure to your landscape, offering a clean backdrop for plants, pathways, and everyday outdoor living.</p>
-      <a href="/contact" class="home-services-btn" title="Get a quote for this service">
+      <a href={contact.href} class="home-services-btn" title="Get a quote for this service">
         Get A Quote
       </a>
     </article>

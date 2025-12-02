@@ -1,41 +1,41 @@
 ---
-import { myInfo } from "@data/myInfo"
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons'
+import { siteConfig } from 'src/config/site.config'
 
-const { companyName, facebook, instagram, youtube } = myInfo
+const { business, socials } = siteConfig
 ---
 
 <section class="social-media-wrapper" aria-label="Social media links section">
   <!-- Facebook -->
   <a
-    href={facebook}
+    href={socials.facebook}
     class="social-media-link"
-    title={`${companyName}'s Facebook account`}
+    title={`${business.name}'s Facebook account`}
     target="_blank"
     rel="noreferrer noopener"
-    aria-label={`Button for going to ${companyName}'s Facebook account`}
+    aria-label={`Button for going to ${business.name}'s Facebook account`}
   >
     <div class="social-icon" set:html={siFacebook.svg}></div>
   </a>
   <!-- Instagram -->
   <a
-    href={instagram}
+    href={socials.instagram}
     class="social-media-link"
-    title={`${companyName}'s Instagram account`}
+    title={`${business.name}'s Instagram account`}
     target="_blank"
     rel="noreferrer noopener"
-    aria-label={`Button for going to ${companyName}'s Instagram account`}
+    aria-label={`Button for going to ${business.name}'s Instagram account`}
   >
     <div class="social-icon" set:html={siInstagram.svg}></div>
   </a>
   <!-- YouTube -->
   <a
-    href={youtube}
+    href={socials.youtube}
     class="social-media-link"
-    title={`${companyName}'s YouTube channel`}
+    title={`${business.name}'s YouTube channel`}
     target="_blank"
     rel="noreferrer noopener"
-    aria-label={`Button for going to ${companyName}'s YouTube channel`}
+    aria-label={`Button for going to ${business.name}'s YouTube channel`}
   >
     <div class="social-icon" set:html={siYoutube.svg}></div>
   </a>

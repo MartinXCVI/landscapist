@@ -1,3 +1,9 @@
+---
+import { routes } from "src/config/routes.config"
+
+const { works } = routes
+---
+
 <section class="services-quote-wrapper" aria-label="Inspiring quote section">
   <blockquote class="services-blockquote" data-aos="zoom-out" data-aos-duration="1500">
     <p class="services-quote">
@@ -6,7 +12,7 @@
     <p class="services-author capital">
       — John Muir
     </p>
-    <a class="services-quote-btn capital" href="/works" title="Go to Works page">
+    <a class="services-quote-btn capital" href={works.href} title="Go to Works page">
       see our works
     </a>
   </blockquote>

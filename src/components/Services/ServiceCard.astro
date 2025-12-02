@@ -1,4 +1,8 @@
 ---
+import { routes } from 'src/config/routes.config';
+
+const { contact } = routes
+
 interface Props {
   reverse?: string;
   dataAos: string;
@@ -21,7 +25,7 @@ const { reverse, dataAos, img, alt, titleId, title, text } = Astro.props as Prop
       {title}
     </h2>
     <p class="service-card-text">{text}</p>
-    <a class="service-card-btn capital" href="/contact" title="Get a quote for this service">
+    <a class="service-card-btn capital" href={contact.href} title="Get a quote for this service">
       get a quote
     </a>
   </article>

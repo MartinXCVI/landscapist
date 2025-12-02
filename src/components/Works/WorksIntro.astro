@@ -1,7 +1,7 @@
 ---
-import { myInfo } from "@data/myInfo"
+import { siteConfig } from "src/config/site.config"
 
-const { city } = myInfo
+const { business } = siteConfig
 ---
 
 <section class="works-intro-wrapper" aria-labelledby="works-intro-title">
@@ -14,6 +14,6 @@ const { city } = myInfo
     our landscaping works
   </h2>
   <p class="works-intro-text" data-aos="fade-up" data-aos-duration="1500">
-    From sprawling estates to cozy, intimate gardens across <strong><em>{city}</em></strong>, I work with both the visible landscape and the hidden layers beneath to craft a harmonious fusion of nature and design. Each project is a unique blend of artistry and sustainability, where every plant, stone, and water feature is carefully selected to enhance the natural beauty of the surroundings. My passion lies in transforming outdoor spaces into living works of art, balancing aesthetics with the environment to create tranquil, timeless sanctuaries for my clients.
+    From sprawling estates to cozy, intimate gardens across <strong><em>{business.city}</em></strong>, I work with both the visible landscape and the hidden layers beneath to craft a harmonious fusion of nature and design. Each project is a unique blend of artistry and sustainability, where every plant, stone, and water feature is carefully selected to enhance the natural beauty of the surroundings. My passion lies in transforming outdoor spaces into living works of art, balancing aesthetics with the environment to create tranquil, timeless sanctuaries for my clients.
   </p>
 </section>

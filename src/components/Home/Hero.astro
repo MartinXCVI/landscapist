@@ -1,17 +1,23 @@
 ---
-import { myInfo } from "@data/myInfo";
+import { siteConfig } from "src/config/site.config";
 
-const { companyName } = myInfo
+const { business } = siteConfig
 ---
 
 <section class="hero-home-section" aria-labelledby="hero-home-title">
   <h1 class="hero-home-title" id="hero-home-title">
-    Landscapist
+    {business.name}
   </h1>
   <p class="hero-home-subtitle">
-    Encouraging Natural Beauty — Enhancing Outdoor Spaces
+    {business.tagline}
   </p>
-  <a class="hero-home-btn" href="/services" title={`See ${companyName}'s services`}>
-    Our Services
-  </a>
+  <div class="hero-home-buttons">
+    <a class="hero-home-btn" href="/services" title={`See ${business.name}'s services`}>
+      Our Services
+    </a>
+    <a class="hero-home-btn contact-btn" href="/contact" title={`Go to ${business.name}'s contact page`}>
+      Contact Us
+    </a>
+  </div>
+  
 </section>

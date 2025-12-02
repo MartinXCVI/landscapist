@@ -10,7 +10,7 @@
   position: relative;
   z-index: 10;
   color: color.$white;
-  text-shadow: 0 0 0.25rem color.$black;
+  text-shadow: 0 0 1rem color.$darkBlack;
   text-align: center;
   &::before {
     @include mx.bgColor(-3, color.$softerBlack, 0.2);
@@ -27,15 +27,26 @@
     color: color.$white;
     margin-bottom: 1.75rem;
   }
+  .hero-home-buttons {
+    @include mx.flexRow(center, center);
+    gap: 1.5rem;
+  }
   .hero-home-btn {
+    min-width: 10rem;
     margin-bottom: 1.25rem;
     padding: 0.75rem 1.5rem;
     font-weight: 300;
+    text-shadow: 0 0 0.75rem color.$black;
     @include mx.btnStyle(transparent, color.$white, color.$white, 3rem);
     transition: var.$trs03;
     &:hover {
       @include mx.colorize(color.$white, color.$black);
       text-shadow: 0 0 0;
+    }
+  }
+  .hero-home-btn.contact-btn {
+    &:hover {
+      @include mx.colorize(color.$firstColor, color.$white);
     }
   }
 }
@@ -188,6 +199,17 @@
 }
 
 @media all and (max-width: 480px) {
+
+  .hero-home-section {
+    .hero-home-buttons {
+      width: 75%;
+      flex-direction: column;
+      gap: 0rem;
+      .hero-home-btn {
+        width: 100%;
+      }
+    }
+  }
 
   .home-services-wrapper {
     .home-services-container {

@@ -8,9 +8,11 @@ import Phone from "@lucide/astro/icons/phone"
 import SquarePen from "@lucide/astro/icons/square-pen"
 import MessageSquareText from "@lucide/astro/icons/message-square-text"
 
-import { config } from "src/config/env"
+import { config } from "src/config/env.config"
+import { VALIDATION_RULES } from "src/constants/validations"
 
 const ACCESS_KEY: string = config.web3FormsApiKey
+const { fullname, email, phone, subject, message } = VALIDATION_RULES
 ---
 
 <section
@@ -37,8 +39,8 @@ const ACCESS_KEY: string = config.web3FormsApiKey
           class="form-input contact-input" 
           name="fullname" 
           id="fullname-input"
-          minlength="3"
-          maxlength="75"
+          minlength={fullname.min}
+          maxlength={fullname.max}
           placeholder="Your full name here"
           aria-label="Full Name"
           required
@@ -54,7 +56,7 @@ const ACCESS_KEY: string = config.web3FormsApiKey
           class="form-input contact-input" 
           name="email" 
           id="email-input"
-          maxlength="120"
+          maxlength={email.max}
           placeholder="Your email address here"
           aria-label="Email"
           autocomplete="on"
@@ -71,8 +73,8 @@ const ACCESS_KEY: string = config.web3FormsApiKey
           class="form-input contact-input" 
           name="phone" 
           id="phone-input"
-          minlength="7"
-          maxlength="15"
+          minlength={phone.min}
+          maxlength={phone.max}
           placeholder="Your phone number here"
           aria-label="Phone"
           autocomplete="on"
@@ -89,8 +91,8 @@ const ACCESS_KEY: string = config.web3FormsApiKey
           class="form-input contact-input" 
           name="subject" 
           id="subject-input"
-          minlength="6"
-          maxlength="70"
+          minlength={subject.min}
+          maxlength={subject.max}
           placeholder="Your message's subject here"
           aria-label="Subject"
           required
@@ -103,11 +105,11 @@ const ACCESS_KEY: string = config.web3FormsApiKey
         </label>
         <textarea
           name="message" 
-          class="form-textarea contact-input" 
-          rows="5" 
+          class="form-textarea contact-input"
+          rows="5"
           id="message-input"
-          minlength="30"
-          maxlength="500"
+          minlength={message.min}
+          maxlength={message.max}
           placeholder="Your detailed message here"
           aria-label="Message"
           required

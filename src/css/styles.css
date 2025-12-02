@@ -21,6 +21,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation: 1s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 1s ease-in both move-in;
+}
+
 body {
   background-color: #fdfdfd;
 }
@@ -206,12 +217,9 @@ button {
   justify-content: center;
   align-items: center;
 }
-.logo-div h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-}
-.logo-div h1 .logo-link {
-  color: initial;
+
+.logo-link img {
+  width: 2.75rem;
 }
 
 @media all and (max-width: 991px) {
@@ -381,7 +389,7 @@ button {
   position: relative;
   z-index: 10;
   color: #fdfdfd;
-  text-shadow: 0 0 0.25rem #151515;
+  text-shadow: 0 0 1rem #060606;
   text-align: center;
 }
 .hero-home-section::before {
@@ -415,10 +423,18 @@ button {
   color: #fdfdfd;
   margin-bottom: 1.75rem;
 }
+.hero-home-section .hero-home-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
 .hero-home-section .hero-home-btn {
+  min-width: 10rem;
   margin-bottom: 1.25rem;
   padding: 0.75rem 1.5rem;
   font-weight: 300;
+  text-shadow: 0 0 0.75rem #151515;
   background-color: transparent;
   color: #fdfdfd;
   border: 1px solid #fdfdfd;
@@ -429,6 +445,10 @@ button {
   background-color: #fdfdfd;
   color: #151515;
   text-shadow: 0 0 0;
+}
+.hero-home-section .hero-home-btn.contact-btn:hover {
+  background-color: #007000;
+  color: #fdfdfd;
 }
 
 .home-intro-wrapper {
@@ -643,6 +663,14 @@ button {
 }
 
 @media all and (max-width: 480px) {
+  .hero-home-section .hero-home-buttons {
+    width: 75%;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .hero-home-section .hero-home-buttons .hero-home-btn {
+    width: 100%;
+  }
   .home-services-wrapper .home-services-container {
     display: flex;
     flex-direction: column;

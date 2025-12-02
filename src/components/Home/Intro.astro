@@ -1,7 +1,6 @@
 ---
-import { myInfo } from "@data/myInfo"
-
-const { companyName } = myInfo
+import { siteConfig } from "src/config/site.config"
+import { routes } from "src/config/routes.config"
 ---
 
 <section class="home-intro-wrapper" aria-labelledby="home-intro-title">
@@ -15,8 +14,8 @@ const { companyName } = myInfo
       </p>
       <a
         class="home-intro-btn"
-        href="/works"
-        title={`See ${companyName}'s portfolio of works`}
+        href={routes.works.href}
+        title={`See ${siteConfig.business.name}'s portfolio of works`}
       >
         Explore our works
       </a>
