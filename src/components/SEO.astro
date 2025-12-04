@@ -1,0 +1,84 @@
+---
+import { siteConfig } from "src/config/site.config"
+import { defaultSEO, getPageSEO, getCanonicalURL, getStructuredData } from "src/config/seo.config"
+
+interface Props {
+  title?: string
+  description?: string
+  keywords?: string[]
+  ogImage?: string
+  noindex?: boolean
+  nofollow?: boolean
+  structuredDataType?: 'WebPage' | 'ContactPage' | 'CollectionPage' | 'AboutPage'
+}
+
+const pathname = Astro.url.pathname
+const pageSEO = getPageSEO(pathname)
+
+// Merging props with page-specific SEO
+const {
+  title = pageSEO.title,
+  description = pageSEO.description,
+  keywords = pageSEO.keywords,
+  ogImage = pageSEO.ogImage,
+  noindex = false,
+  nofollow = false,
+  structuredDataType = 'WebPage',
+} = Astro.props
+
+const canonicalURL = getCanonicalURL(pathname)
+const structuredData = getStructuredData(pathname, structuredDataType)
+
+// Robots meta
+const robotsContent = [
+  noindex ? 'noindex' : 'index',
+  nofollow ? 'nofollow' : 'follow',
+].join(', ')
+
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+<meta name="author" content={siteConfig.business.name} />
+<meta name="robots" content={robotsContent} />
+<meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={defaultSEO.openGraph.type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={siteConfig.business.name} />
+<meta property="og:locale" content={siteConfig.site.locale} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content={defaultSEO.twitter.card} />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{defaultSEO.twitter.site && <meta name="twitter:site" content={defaultSEO.twitter.site} />}
+{defaultSEO.twitter.creator && <meta name="twitter:creator" content={defaultSEO.twitter.creator} />}
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- Business Structured Data (on all pages) -->
+<script type="application/ld+json" set:html={JSON.stringify(defaultSEO.structuredData)} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Title -->
+<title>{title}</title>

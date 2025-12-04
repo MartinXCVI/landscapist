@@ -1,23 +1,40 @@
 ---
+import SEO from '@components/SEO.astro';
 import '../css/styles.css'
 import 'aos/dist/aos.css';
 
 interface Props {
-	title: string;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogImage?: string;
+  noindex?: boolean;
+	nofollow?: boolean;
+  structuredDataType?: 'WebPage' | 'ContactPage' | 'CollectionPage' | 'AboutPage';
 }
 
-const { title } = Astro.props as Props
+const { 
+  title, 
+  description, 
+  keywords, 
+  ogImage, 
+  noindex,
+	nofollow,
+  structuredDataType 
+} = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Minimalist and elegant website template for landscapers or landscape design studios. Built with Astro, TypeScript, and SCSS." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<SEO
+			title={title}
+			description={description}
+			keywords={keywords}
+			ogImage={ogImage}
+			noindex={noindex}
+			structuredDataType={structuredDataType}
+		/>
 	</head>
 	<body id="body">
 		<slot />
