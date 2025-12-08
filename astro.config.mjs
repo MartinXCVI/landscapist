@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: import.meta.env.SITE_URL,
+  site: process.env.SITE_URL || 'https://landscapist.vercel.app',
   integrations: [
     sitemap({
       // Excluded pages from sitemap
