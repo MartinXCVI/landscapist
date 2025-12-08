@@ -4,7 +4,7 @@ import { siteConfig } from 'src/config/site.config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: siteConfig.site.url,
+  site: import.meta.env.SITE_URL,
   integrations: [
     sitemap({
       // Excluded pages from sitemap
