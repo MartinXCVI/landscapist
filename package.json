@@ -13,12 +13,12 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
     "@lucide/astro": "^0.555.0",
-    "aos": "^2.3.4",
     "astro": "^5.15.9",
+    "gsap": "^3.14.1",
     "simple-icons": "^15.22.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7"
+    "sass": "^1.95.1"
   }
 }

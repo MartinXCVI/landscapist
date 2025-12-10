@@ -21,17 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@view-transition {
-  navigation: auto;
-}
-::view-transition-old(root) {
-  animation: 1s ease-in both move-out;
-}
-
-::view-transition-new(root) {
-  animation: 1s ease-in both move-in;
-}
-
 body {
   background-color: #fdfdfd;
 }

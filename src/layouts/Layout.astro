@@ -1,7 +1,6 @@
 ---
 import SEO from '@components/SEO.astro';
 import '../css/styles.css'
-import 'aos/dist/aos.css';
 
 interface Props {
   title?: string;
@@ -39,9 +38,5 @@ const {
 	<body id="body">
 		<slot />
 		<script src="../utils/hamMenu.ts"></script>
-		<script> 
-			import AOS from "aos";
-			AOS.init(); 
-		</script>
 	</body>
 </html>

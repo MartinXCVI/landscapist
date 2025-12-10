@@ -11,7 +11,7 @@ const { img, alt, title, text, titleId } = Astro.props as Props
 ---
 
 <article class="landscape-wrapper" role="region" aria-labelledby={titleId}>
-  <figure class="landscape-figure" data-aos="zoom-in" data-aos-duration="1500">
+  <figure class="landscape-figure">
     <img src={img} alt={alt} title={alt}>
   </figure>
   <h3 class="landscape-title capital" id={titleId}>

@@ -20,7 +20,6 @@ import Footer from "@components/Footer.astro";
     <ServicesIntro />
 		<ServicesSection>
 			<ServiceCard
-				dataAos="flip-right"
 				img="/images/services/services-img-1.webp"
 				alt="Blissful backyard design by a lake"
 				titleId="eye-catching-landscaping-title"
@@ -28,8 +27,7 @@ import Footer from "@components/Footer.astro";
 				text="A refined approach to shaping outdoor spaces with clarity, harmony, and subtle artistry. We blend natural textures, balanced forms, and gentle color to create landscapes that feel inviting and effortlessly elegant. Each project is guided by intention, offering a calm environment where beauty stands out without overwhelming the space."
 			/>
 			<ServiceCard
-				reverse="reverse"
-				dataAos="flip-left"
+				reverse={true}
 				img="/images/services/services-img-2.webp"
 				alt="A neat yard in a sunset landscape"
 				titleId="turf-handling-title"
@@ -37,7 +35,6 @@ import Footer from "@components/Footer.astro";
 				text="We care for every stretch of turf with precision, consistency, and a focus on long-term health. Through mindful treatments, even trimming, and soft detailing, we keep your lawn vibrant and clean. Our approach balances structure with natural flow, giving your outdoor space a fresh foundation that stays bright throughout the seasons."
 			/>
 			<ServiceCard
-				dataAos="flip-right"
 				img="/images/services/services-img-3.webp"
 				alt="Warm sun rising forestry work in a park"
 				titleId="organic-forestry-title"
@@ -45,8 +42,7 @@ import Footer from "@components/Footer.astro";
 				text="A service rooted in respect for natural growth, encouraging trees and shrubs to flourish with minimal intervention. We guide development through gentle shaping, selective care, and mindful preservation. Each step strengthens the landscape’s character, creating a space that feels authentic, balanced, and deeply connected to the surrounding environment."
 			/>
 			<ServiceCard
-				reverse="reverse"
-				dataAos="flip-left"
+				reverse={true}
 				img="/images/services/services-img-4.webp"
 				alt="Delicate interior decoration above a meetings and gatherings table"
 				titleId="greeny-beautifications-title"
@@ -54,7 +50,6 @@ import Footer from "@components/Footer.astro";
 				text="We enhance outdoor areas with soft touches of greenery that add life, texture, and quiet charm. From plant arrangements to subtle accents, each detail brings balance and lightness. Our work highlights natural beauty without clutter, creating refreshing spaces that feel vibrant, harmonious, and gently uplifting."
 			/>
 			<ServiceCard
-				dataAos="flip-right"
 				img="/images/services/services-img-5.webp"
 				alt="Impressive central garden in a colonial-style mansion"
 				titleId="gardens-structuring-title"
@@ -62,8 +57,7 @@ import Footer from "@components/Footer.astro";
 				text="We develop gardens with thoughtful layout, clean alignment, and intentional spacing. By combining practical flow with artistic restraint, we shape outdoor areas that are easy to enjoy and simple to maintain. The result is a clear and inviting environment where every element supports a calm, grounded sense of order."
 			/>
 			<ServiceCard
-				reverse="reverse"
-				dataAos="flip-left"
+				reverse={true}
 				img="/images/services/services-img-6.webp"
 				alt="A small and pretty front yard after a maintenance job."
 				titleId="smooth-maintenance-title"
@@ -74,4 +68,5 @@ import Footer from "@components/Footer.astro";
 		<ServicesQuote />
   </main>
 	<Footer />
+	<script src="../scripts/ini/services.init.ts"></script>
 </Layout>
